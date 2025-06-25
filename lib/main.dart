@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'lib/pages/signup.dart';
 import 'pages/login.dart';
 import 'pages/forgot_pass.dart';
 
