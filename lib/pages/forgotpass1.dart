@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:skinsight/pages/forgotpass1.dart';
 import 'package:skinsight/pages/forgotpass2.dart';
-
-
 
 class Forgot1 extends StatelessWidget {
   const Forgot1({super.key});
 
-class Forgot1 extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF4F5F7),
       body: Column(
         children: [
-          // Blue navbar-like header at the top
+          // Blue header
           Container(
             width: double.infinity,
-            padding: EdgeInsets.only(top: 50, bottom: 30),
-            decoration: BoxDecoration(
-              color: Color(0xFF0A2C59), // Blue color
+            padding: const EdgeInsets.only(top: 50, bottom: 30),
+            decoration: const BoxDecoration(
+              color: Color(0xFF0A2C59),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black12,
@@ -39,8 +36,8 @@ class Forgot1 extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 10),
-                Text(
+                const SizedBox(height: 10),
+                const Text(
                   "SANGGUNIANG KABATAAN\n BARANGAY\nPUTING BATO WEST",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -53,18 +50,19 @@ class Forgot1 extends StatelessWidget {
               ],
             ),
           ),
-          // White forgot password form centered in a box
+
+          // White card content
           Expanded(
             child: Center(
               child: Container(
                 width: MediaQuery.of(context).size.width > 390
                     ? 350
                     : MediaQuery.of(context).size.width - 40,
-                constraints: BoxConstraints(minHeight: 300),
+                constraints: const BoxConstraints(minHeight: 300),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 12,
@@ -73,12 +71,12 @@ class Forgot1 extends StatelessWidget {
                   ],
                 ),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  padding: const EdgeInsets.all(20),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Check Your Email",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -86,121 +84,66 @@ class Forgot1 extends StatelessWidget {
                           color: Colors.black87,
                         ),
                       ),
-                      SizedBox(height: 20),
-                      Text(
+                      const SizedBox(height: 20),
+                      const Text(
                         "If an account with that email exists, a reset link has been sent",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize:20,
-                        ),
+                        style: TextStyle(fontSize: 16),
                       ),
-                      SizedBox(height: 20),
-                      Text(
+                      const SizedBox(height: 20),
+                      const Text(
                         "Please check your inbox or spam folder",
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize:20,
-                        ),
+                        style: TextStyle(fontSize: 16),
                       ),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('Go back to',
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),),
-                            SizedBox(height: 25),
-                            SizedBox(
-                              child: TextButton(
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Forgot1()),
-                                  );
-                                },
-                                child: Text(
-                                  "Login",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.blue,
-                                    decoration: TextDecoration.underline,
-                                    decorationColor: Colors.blue
-                                  ),
-                                ),
+                      const SizedBox(height: 30),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Go back to ',
+                            style: TextStyle(fontSize: 16),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pop(context); // Return to previous screen
+                            },
+                            child: const Text(
+                              "Login",
+                              style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.blue,
+                                decoration: TextDecoration.underline,
+                                decorationColor: Colors.blue,
                               ),
                             ),
-                            
-                          ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      SizedBox(
+                        width: double.infinity,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Forgot2()),
+                            );
+                          },
+                          child: const Text(
+                            "Link to reset",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.blue,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.blue,
+                            ),
+                          ),
                         ),
-                      )
-                      
+                      ),
                     ],
                   ),
                 ),
-              ),
-            ),
-          ),
-          SizedBox(height: 25),
-          SizedBox(
-            child: TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Forgot2()),
-                );
-              },
-              child: Text(
-                "link to reset",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.blue,
-                  decoration: TextDecoration.underline,
-                  decorationColor: Colors.blue
-                ),
-      body: Container(
-        child: Column(
-          children: [
-            Container(child: Image.asset('assets/sk.jpg')),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Container(child: Text('Check your Email'))],
-              ),
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text(
-                      'If an account with that email exist, a reset link has been sent',
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text('Please check your inbox or spam folder'),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(child: Text('Go back to')),
-                  ElevatedButton(onPressed: () {}, child: Text('Log in')),
-                ],
               ),
             ),
           ),
@@ -209,4 +152,3 @@ class Forgot1 extends StatelessWidget {
     );
   }
 }
-
