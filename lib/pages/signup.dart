@@ -60,7 +60,7 @@ class Signup extends StatelessWidget {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -118,7 +118,10 @@ class Signup extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF3467B3),
                           ),
-                          child: const Text("Sign up"),
+                          child: const Text("Sign up",
+                            style: TextStyle(
+                              color: Colors.white
+                            ),),
                         ),
                       ),
                     ],
