@@ -13,8 +13,8 @@ class Forgot extends StatelessWidget {
           // Blue navbar-like header at the top
           Container(
             width: double.infinity,
-            padding: EdgeInsets.only(top: 50, bottom: 30),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.only(top: 50, bottom: 30),
+            decoration: const BoxDecoration(
               color: Color(0xFF0A2C59), // Blue color
               boxShadow: [
                 BoxShadow(
@@ -36,8 +36,8 @@ class Forgot extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(height: 10),
-                Text(
+                const SizedBox(height: 10),
+                const Text(
                   "SANGGUNIANG KABATAAN\n BARANGAY\nPUTING BATO WEST",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -57,11 +57,11 @@ class Forgot extends StatelessWidget {
                 width: MediaQuery.of(context).size.width > 390
                     ? 350
                     : MediaQuery.of(context).size.width - 40,
-                constraints: BoxConstraints(minHeight: 300),
+                constraints: const BoxConstraints(minHeight: 300),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 12,
@@ -70,12 +70,12 @@ class Forgot extends StatelessWidget {
                   ],
                 ),
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  padding: const EdgeInsets.all(20),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Forgot Your Password",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class Forgot extends StatelessWidget {
                           color: Colors.black87,
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Text(
                         "Enter your email to reset your password",
                         textAlign: TextAlign.center,
@@ -92,24 +92,24 @@ class Forgot extends StatelessWidget {
                           fontSize: 14,
                         ),
                       ),
-                      SizedBox(height: 25),
-                      TextField(
+                      const SizedBox(height: 25),
+                      const TextField(
                         decoration: InputDecoration(
                           prefixIcon: Icon(Icons.email),
                           hintText: 'Email',
                           border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
                           ),
                           filled: true,
                           fillColor: Color(0xFFF4F5F7),
                         ),
                       ),
-                      SizedBox(height: 25),
+                      const SizedBox(height: 25),
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF3467B3),
+                            backgroundColor: const Color(0xFF3467B3),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -117,10 +117,10 @@ class Forgot extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Forgot1()),
+                              MaterialPageRoute(builder: (context) => const Forgot1()),
                             );
                           },
-                          child: Text(
+                          child: const Text(
                             "Send Reset Link",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -136,55 +136,6 @@ class Forgot extends StatelessWidget {
             ),
           ),
         ],
-=======
-      body: Container(
-        child: Column(
-          children: [
-            Container(child: Image.asset('assets/sk.jpg')),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Container(child: Text('Forgot Your Password'))],
-              ),
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    child: Text('Enter your email to reset your password'),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Container(child: Text('Email: __________________'))],
-              ),
-            ),
-            Container(
-              child: Column(
-                children: [
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Forgot1()),
-                        );
-                      },
-                      child: Text('Send Reset Link'),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }

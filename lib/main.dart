@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'lib/pages/signup.dart';
+import 'pages/signup.dart';
 import 'pages/login.dart';
 import 'pages/forgot_pass.dart';
 
 void main() {
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,8 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Forgot(),
+      home: LoginPage(), // or Forgot() if you want that first
     );
   }
 }
