@@ -13,6 +13,19 @@ class Home extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.fromLTRB(20, 50, 0, 0),
+                    width: 320,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 255, 255, 255),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black12,
+                          blurRadius: 10,
+                          spreadRadius: 2,
+                          offset: Offset(0, 4),
+                        ),
+                      ],
+                    ),
               width: 320,
               height: 65,
               padding: EdgeInsets.all(20),
