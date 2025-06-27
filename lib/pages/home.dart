@@ -10,9 +10,10 @@ class Home extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            // Navbar
             Container(
-              margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
-              width: 320,
+              margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
+              width: 330,
               height: 65,
               padding: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
@@ -27,17 +28,33 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Stack(
-                alignment: Alignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  // Left: Logo + Text
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Icon(Icons.person, color: Colors.white),
-                      Icon(Icons.notifications, color: Colors.white),
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child:
+                        Image.asset('assets/logo.jpg',
+                          width: 30, height: 30,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      const Text(
+                        "SK-INSIGHT",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ],
                   ),
-                  // Center popup menu button (hamburger)
+
+                  // Center: Hamburger menu
                   PopupMenuButton<String>(
                     icon: const Icon(Icons.menu, color: Colors.white),
                     color: Colors.white,
@@ -59,9 +76,20 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
+
+                  // Right: Person + Bell
+                  Row(
+                    children: const [
+                      Icon(Icons.person, color: Colors.white),
+                      SizedBox(width: 10),
+                      Icon(Icons.notifications, color: Colors.white),
+                    ],
+                  ),
                 ],
               ),
             ),
+
+            // Body content
             Container(
               alignment: Alignment.center,
               child: Column(
@@ -69,8 +97,8 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
-                    width: 300,
+                    margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                    width: 330,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color(0xFFFFFFFF),
@@ -87,6 +115,21 @@ class Home extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF0A2C59),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: const Text(
+                            'SK-INSIGHT',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Container(
                           margin: const EdgeInsets.only(top: 24),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(20),
@@ -97,7 +140,32 @@ class Home extends StatelessWidget {
                           ),
                         ),
                         Container(
-                          margin: const EdgeInsets.only(top: 32),
+                          margin: const EdgeInsets.only(top: 15),
+                          child: const Text(
+                            'Advanced analytics to grow your barangay programs',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Color(0xFF0A2C59),
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 10),
+                          padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                          child: const Text(
+                            'Empowering the youth through community involvement, transparency, and smart tracking of educational assistance and profiling.',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: Color(0xFF0A2C59),
+                              fontWeight: FontWeight.w400,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 15),
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
