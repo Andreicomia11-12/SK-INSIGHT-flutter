@@ -14,11 +14,9 @@ class Home extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(20, 50, 0, 0),
                     width: 320,
-                    height: 60,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF0A2C59),
-                      borderRadius: BorderRadius.circular(16),
+                      color: const Color.fromARGB(255, 255, 255, 255),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
