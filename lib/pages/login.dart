@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skinsight/pages/home.dart';
 
 void main() {
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
@@ -163,7 +164,12 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             minimumSize: Size(double.infinity, 50),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Home()),
+                            );
+                          },
                           child: Text(
                             "login",
                             style: TextStyle(

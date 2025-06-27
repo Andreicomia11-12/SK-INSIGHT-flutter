@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:skinsight/pages/forgotpass1.dart';
+import 'package:skinsight/pages/forgot_pass.dart';
+import 'package:skinsight/pages/login.dart';
 
 
 class Forgot3 extends StatelessWidget {
@@ -111,7 +112,7 @@ class Forgot3 extends StatelessWidget {
                                 onPressed: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => Forgot1()),
+                                    MaterialPageRoute(builder: (context) => LoginPage()),
                                   );
                                 },
                                 child: Text(
