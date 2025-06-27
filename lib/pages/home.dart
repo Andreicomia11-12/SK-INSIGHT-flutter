@@ -26,6 +26,30 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
+              width: 320,
+              height: 65,
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: const Color(0xFF0A2C59),
+                borderRadius: BorderRadius.circular(16),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 10,
+                    spreadRadius: 2,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  // dito
+                  Container(child: Icon(Icons.person, color: Colors.white)),
+                  Container(
+                    child: Icon(Icons.notifications, color: Colors.white),
+                  ),
+                ],
+              ),
             ),
             Container(
               child: Column(
@@ -35,7 +59,6 @@ class Home extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.fromLTRB(25, 50, 0, 0),
                     width: 300,
-                    height: 600,
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 255, 255, 255),
@@ -49,20 +72,50 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 80, 0, 0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset(
-                                  'assets/home.jpg',
-                                  fit: BoxFit.contain,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(top: 24),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset(
+                                'assets/home.jpg',
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(top: 32),
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Get Started',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF0A2C59),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.pop(
+                                  context,
+                                ); // Return to previous screen
+                              },
+                              child: const Text(
+                                "How it Works",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: const Color(0xFF0A2C59),
                                 ),
-                              )
-                        ),
-                        
-                      ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
