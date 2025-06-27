@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SK-INSIGHT',
-      home: Aboutus(), // or Forgot() if you want that first
+      home: Home(), // or Forgot() if you want that first
     );
   }
 }

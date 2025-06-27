@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:skinsight/pages/forgotpass1.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -12,27 +11,14 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.fromLTRB(20, 50, 0, 0),
-                    width: 320,
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          spreadRadius: 2,
-                          offset: Offset(0, 4),
-                        ),
-                      ],
-                    ),
+              margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
               width: 320,
               height: 65,
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
                 color: const Color(0xFF0A2C59),
                 borderRadius: BorderRadius.circular(16),
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
                     blurRadius: 10,
@@ -41,29 +27,55 @@ class Home extends StatelessWidget {
                   ),
                 ],
               ),
-              child: Row(
+              child: Stack(
+                alignment: Alignment.center,
                 children: [
-                  // dito
-                  Container(child: Icon(Icons.person, color: Colors.white)),
-                  Container(
-                    child: Icon(Icons.notifications, color: Colors.white),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Icon(Icons.person, color: Colors.white),
+                      Icon(Icons.notifications, color: Colors.white),
+                    ],
+                  ),
+                  // Center popup menu button (hamburger)
+                  PopupMenuButton<String>(
+                    icon: const Icon(Icons.menu, color: Colors.white),
+                    color: Colors.white,
+                    onSelected: (value) {
+                      if (value == 'educational') {
+                        print("Educational Assistance clicked");
+                      } else if (value == 'profiling') {
+                        print("Profiling clicked");
+                      }
+                    },
+                    itemBuilder: (BuildContext context) => [
+                      const PopupMenuItem(
+                        value: 'educational',
+                        child: Text('Educational Assistance'),
+                      ),
+                      const PopupMenuItem(
+                        value: 'profiling',
+                        child: Text('Profiling'),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
             Container(
+              alignment: Alignment.center,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    margin: EdgeInsets.fromLTRB(25, 50, 0, 0),
+                    margin: const EdgeInsets.fromLTRB(0, 50, 0, 0),
                     width: 300,
-                    padding: EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 255, 255, 255),
+                      color: const Color(0xFFFFFFFF),
                       borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black12,
                           blurRadius: 10,
@@ -72,50 +84,44 @@ class Home extends StatelessWidget {
                         ),
                       ],
                     ),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(top: 24),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                'assets/home.jpg',
-                                fit: BoxFit.contain,
-                              ),
+                    child: Column(
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 24),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.asset(
+                              'assets/home.jpg',
+                              fit: BoxFit.contain,
                             ),
                           ),
-                          Container(
-                            margin: EdgeInsets.only(top: 32),
-                            child: ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Get Started',
-                                style: TextStyle(color: Colors.white),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF0A2C59),
-                              ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 32),
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF0A2C59),
+                            ),
+                            child: const Text(
+                              'Get Started',
+                              style: TextStyle(color: Colors.white),
                             ),
                           ),
-                          Container(
-                            child: TextButton(
-                              onPressed: () {
-                                Navigator.pop(
-                                  context,
-                                ); // Return to previous screen
-                              },
-                              child: const Text(
-                                "How it Works",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  color: const Color(0xFF0A2C59),
-                                ),
-                              ),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text(
+                            "How it Works",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color(0xFF0A2C59),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
