@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
             Container(
               margin: EdgeInsets.fromLTRB(20, 50, 0, 0),
               width: 320,
-              height: 60,
+              height: 65,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: const Color(0xFF0A2C59),
@@ -25,6 +25,15 @@ class Home extends StatelessWidget {
                     blurRadius: 10,
                     spreadRadius: 2,
                     offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: [
+                  // dito
+                  Container(child: Icon(Icons.person, color: Colors.white)),
+                  Container(
+                    child: Icon(Icons.notifications, color: Colors.white),
                   ),
                 ],
               ),
@@ -91,16 +100,6 @@ class Home extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            // child: ElevatedButton(
-                            //   onPressed: () {},
-                            //   child: Text(
-                            //     'Get Started',
-                            //     style: TextStyle(color: Colors.white),
-                            //   ),
-                            //   style: ElevatedButton.styleFrom(
-                            //     backgroundColor: const Color(0xFF0A2C59),
-                            //   ),
-                            // ),
                           ),
                         ],
                       ),
