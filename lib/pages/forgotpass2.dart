@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skinsight/pages/forgot_pass.dart';
 import 'package:skinsight/pages/forgotpass1.dart';
 import 'package:skinsight/pages/forgotpass3.dart';
 
@@ -134,7 +135,12 @@ class _Forgot2State extends State<Forgot2> {
                               borderRadius: BorderRadius.circular(8.0),
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Forgot3()),
+                            );
+                          },
                           child: Text(
                             "Submit",
                             style: TextStyle(fontWeight: FontWeight.bold,
