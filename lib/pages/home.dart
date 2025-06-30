@@ -35,20 +35,22 @@ class Home extends StatelessWidget {
                   // Left: Logo + Text
                   Row(
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child:
-                        Image.asset('assets/logo.jpg',
-                          width: 30, height: 30,
+                      Container(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(40),
+                          child:
+                          Image.asset('assets/logo.jpg',
+                            width: 40, height: 40,
+                          ),
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      const SizedBox(width: 10),
                       const Text(
                         "SK-INSIGHT",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
