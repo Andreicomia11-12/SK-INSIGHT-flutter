@@ -56,28 +56,59 @@ class Home extends StatelessWidget {
                     ],
                   ),
 
-                  // Center: Hamburger menu
-                  PopupMenuButton<String>(
-                    icon: const Icon(Icons.menu, color: Colors.white),
-                    color: Colors.white,
-                    onSelected: (value) {
-                      if (value == 'educational') {
-                        print("Educational Assistance clicked");
-                      } else if (value == 'profiling') {
-                        print("Profiling clicked");
-                      }
-                    },
-                    itemBuilder: (BuildContext context) => [
-                      const PopupMenuItem(
-                        value: 'educational',
-                        child: Text('Educational Assistance'),
+
+                   PopupMenuButton<String>(
+                      icon: const Icon(Icons.menu, color: Colors.white, size: 30,),
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      const PopupMenuItem(
+                      elevation: 8, // Shadow effect
+                      onSelected: (value) {
+                        if (value == 'educational') {
+                          print("Educational Assistance");
+                        } else if (value == 'profiling') {
+                          print("Profiling");
+                        }
+                      },
+
+                      itemBuilder: (BuildContext context) => [
+                      PopupMenuItem(
+                        value: 'educational',
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.school, color: Colors.blueAccent, size: 20),
+                              SizedBox(width: 10),
+                              Text(
+                                'Educational Assistance',
+                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      PopupMenuItem(
                         value: 'profiling',
-                        child: Text('Profiling'),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.person, color: Colors.green, size: 20),
+                              SizedBox(width: 10),
+                              Text(
+                                'SK Profiling',
+                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
-                  ),
+                   ),
+                  // Center: Hamburger menu
+
 
                   // Right: Person + Bell
                   Row(
