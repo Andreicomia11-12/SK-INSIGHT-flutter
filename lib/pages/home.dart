@@ -13,17 +13,17 @@ class Home extends StatelessWidget {
             // Navbar
             Container(
               margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
-              width: 330,
-              height: 65,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              width: 335,
+              height: 70,
+              padding: const EdgeInsets.symmetric(horizontal: 25),
               decoration: BoxDecoration(
                 color: const Color(0xFF0A2C59),
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(18),
                 boxShadow: const [
                   BoxShadow(
                     color: Colors.black12,
                     blurRadius: 10,
-                    spreadRadius: 2,
+                    spreadRadius: 5,
                     offset: Offset(0, 4),
                   ),
                 ],
