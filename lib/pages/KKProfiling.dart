@@ -34,7 +34,6 @@ class Kkprofiling extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Left: Logo + Text
                   Row(
                     children: [
                       Container(
@@ -737,47 +736,709 @@ class Kkprofiling extends StatelessWidget {
                     ),
                   ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Contact Number:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Civil Status:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Single',
+                                          child: Text('Single'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Married',
+                                          child: Text('Married'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Divorced',
+                                          child: Text('Divorced'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Widowed',
+                                          child: Text('Widowed'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Separated',
+                                          child: Text('Separated'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Annuled',
+                                          child: Text('Annuled'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Live-in',
+                                          child: Text('Live-in'),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
                                 ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Youth Classification:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'In School Youth',
+                                          child: Text('In School Youth'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Out School Youth',
+                                          child: Text('Out School Youth'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Working',
+                                          child: Text('Working'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Youth Special Needs',
+                                          child: Text('Youth w/ needs'),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Youth Classification:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'In School Youth',
+                                          child: Text('In School Youth'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Out School Youth',
+                                          child: Text('Out School Youth'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Working',
+                                          child: Text('Working'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Youth Special Needs',
+                                          child: Text('Youth w/ needs'),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Work Status:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Employed',
+                                          child: Text('Employes'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Unemployed',
+                                          child: Text('Unemployed'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Self-Employed',
+                                          child: Text('Self-Employed'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Looking for a Job',
+                                          child: Text('Looking for a Job'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Not Interested',
+                                          child: Text('Not Interested'),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Educational Background:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Elementary Undergraduate',
+                                          child: Text('Elementary Undergraduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Elementary Graduate',
+                                          child: Text('Elementary Graduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'High School Undergraduate',
+                                          child: Text('High School Undergraduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'High School Graduate',
+                                          child: Text('High School Graduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Vocational Graduate',
+                                          child: Text('Vocational Graduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'College Undergraduate',
+                                          child: Text('College Undergraduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'College Graduate',
+                                          child: Text('College Graduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Master Level',
+                                          child: Text('Master Level'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Master Graduate',
+                                          child: Text('Master Graduate'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Doctorate Level',
+                                          child: Text('Doctorate Level'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Doctorate Graduate',
+                                          child: Text('Doctorate Graduate'),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Registered SK Voter:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Yes',
+                                          child: Text('Yes'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'No',
+                                          child: Text('No'),
+                                        ),
+
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Registered National Voter:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Yes',
+                                          child: Text('Yes'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'No',
+                                          child: Text('No'),
+                                        ),
+
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Voted last SK Election:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Yes',
+                                          child: Text('Yes'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'No',
+                                          child: Text('No'),
+                                        ),
+
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('If yes (How many times)'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Never',
+                                          child: Text('Never'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'one to two',
+                                          child: Text('one to two'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'three or more',
+                                          child: Text('three or more'),
+                                        ),
+
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('Have You Attended KK assembly:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Yes',
+                                          child: Text('Yes'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'No',
+                                          child: Text('No'),
+                                        ),
+
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('If yes how many Times:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'Never',
+                                          child: Text('Never'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'one to two',
+                                          child: Text('one to two'),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'three or more',
+                                          child: Text('three or more'),
+                                        ),
+
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                          'If no why?:'
+                                      ),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
 
                       ],
                     ),
