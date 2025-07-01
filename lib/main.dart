@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:skinsight/pages/home.dart';
 import 'pages/signup.dart';
 import 'pages/login.dart';
 import 'pages/forgot_pass.dart';
 import 'pages/forgotpass1.dart';
 import 'pages/forgotpass2.dart';
 import 'pages/forgotpass3.dart';
+import 'pages/aboutus.dart';
+import 'pages/home.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SK-INSIGHT',
-      home: Forgot3(), // or Forgot() if you want that first
+      home: Home(), // or Forgot() if you want that first
     );
   }
 }
