@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'KKProfiling.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -6,6 +7,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFFD1E1F5),
       body: SingleChildScrollView(
         child: Column(
@@ -94,13 +96,27 @@ class Home extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
                           child: Row(
-                            children: const [
-                              Icon(Icons.person, color: Colors.green, size: 20),
-                              SizedBox(width: 10),
-                              Text(
-                                'SK Profiling',
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+                            children: [
+                              const Icon(Icons.person, color: Colors.green, size: 20),
+                              const SizedBox(width: 10),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Kkprofiling(),
+                                    ),
+                                  );
+                                },
+                                child: const Text(
+                                  "SK Profiling",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),),
                               ),
+                                    
                             ],
                           ),
                         ),
