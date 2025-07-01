@@ -150,6 +150,7 @@ class Kkprofiling extends StatelessWidget {
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.black12,
@@ -162,26 +163,48 @@ class Kkprofiling extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
+                          width: double.infinity,
                           child: Text(
-                            'KK Survey Questionnaire'
+                            'KK Survey Questionnaire',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
 
                         Container(
+                          width: double.infinity,
                           child: Text(
                             'TO THE RESPONDENTS:',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
 
                         Container(
                           child: Text(
-                            'We are currently conducting a study that focuses on assessing the demographic information of the Katipunan ng Kabataan. We would like to ask your participation by taking your time to answer this questionnaire. Please read the questions carefully and answer them accurately'
+                            'We are currently conducting a study that focuses on assessing the demographic information of the Katipunan ng Kabataan. We would like to ask your participation by taking your time to answer this questionnaire. Please read the questions carefully and answer them accurately',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
 
                         Container(
                           child: Text(
-                            'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.'
+                            'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.',
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         )
                       ],
@@ -199,6 +222,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -212,14 +236,19 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
-                                  'I. Profile'
+                                  'I. Profile',
+                                  textAlign: TextAlign.left,
                                 ),
                               ),
                               Container(
+                                width: double.infinity,
                                 child: Text(
-                                  'Last Name:'
+                                  'Last Name:',
+                                  textAlign: TextAlign.left,
                                 ),
+
                               ),
                               Container(
                                 child: TextFormField(
@@ -243,6 +272,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -256,6 +286,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'First Name:'
                                 ),
@@ -285,6 +316,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -298,6 +330,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Middle Name:'
                                 ),
@@ -327,6 +360,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -340,6 +374,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Suffix:'
                                 ),
@@ -369,6 +404,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -382,6 +418,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Gender:'
                                 ),
@@ -411,6 +448,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -424,6 +462,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Age:'
                                 ),
@@ -453,6 +492,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -466,6 +506,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Birthday:'
                                 ),
@@ -495,6 +536,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -508,6 +550,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Region:'
                                 ),
@@ -537,6 +580,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -550,6 +594,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Province:'
                                 ),
@@ -579,6 +624,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -592,6 +638,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Municipality:'
                                 ),
@@ -621,6 +668,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -634,6 +682,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Barangay:'
                                 ),
@@ -663,6 +712,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -676,6 +726,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Purok:'
                                 ),
@@ -705,6 +756,7 @@ class Kkprofiling extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -718,6 +770,7 @@ class Kkprofiling extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'E-mail Address:'
                                 ),
