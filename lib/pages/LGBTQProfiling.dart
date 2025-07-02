@@ -396,6 +396,90 @@ class LGBTQ extends StatelessWidget {
                     ),
                   ),
 
+                        Container(
+                          alignment: Alignment.center,
+                          margin: EdgeInsets.only(bottom: 10),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text('LGBTQIA+ Classification:'),
+                                    const SizedBox(height: 10),
+                                    DropdownButtonFormField<String>(
+                                      decoration: const InputDecoration(
+                                        labelText: 'Your Answer',
+                                      ),
+                                      items: const [
+                                        DropdownMenuItem(
+                                          value: 'In School Youth',
+                                          child: Text(
+                                            'In School Youth',
+                                            style: TextStyle(
+                                            ),
+                                          ),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Lesbian',
+                                          child: Text(
+                                            'Lesbian',
+                                            style: TextStyle(
+                                            ),
+                                          ),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Gay',
+                                          child: Text(
+                                            'Gay',
+                                            style: TextStyle(
+                                            ),
+                                          ),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Transgender',
+                                          child: Text(
+                                            'Transgender',
+                                            style: TextStyle(
+                                            ),
+                                          ),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Intersex',
+                                          child: Text(
+                                            'Intersex',
+                                            style: TextStyle(
+                                            ),
+                                          ),
+                                        ),
+                                        DropdownMenuItem(
+                                          value: 'Asexual',
+                                          child: Text(
+                                            'Asexual',
+                                            style: TextStyle(
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                      onChanged: (value) {
+                                        // handle selection
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
                       ],
                     ),
                   ),
