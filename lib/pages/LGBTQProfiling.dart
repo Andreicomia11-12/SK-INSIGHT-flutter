@@ -150,6 +150,7 @@ class LGBTQ extends StatelessWidget {
                     width: 330,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(16),
                       boxShadow: const [
                         BoxShadow(
@@ -163,26 +164,54 @@ class LGBTQ extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
+                          width: double.infinity,
                           child: Text(
-                            'LGBTQIA+ Profiling'
+                            'LGBTQIA+ Profiling',
+                            style:
+                            TextStyle(
+                              fontSize: 19,
+                              fontWeight: FontWeight.w500
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
 
                         Container(
+                          width: double.infinity,
                           child: Text(
                             'TO THE RESPONDENTS:',
+                            style:
+                            TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         ),
 
                         Container(
+                          margin: EdgeInsets.only(top: 8),
                           child: Text(
-                            'Ang form na ito ay ginawa ng Sangguniang Kabataan ng Barangay Puting Bato West upang makilala ang mga miyembro ng LGBTQIA+ sa ating komunidad. Sa pamamagitan ng impormasyong ito, mas maipaplano at maisasagawa ang mga aktibidad at kaganapan para sa Pride Month.'
+                            'Ang form na ito ay ginawa ng Sangguniang Kabataan ng Barangay Puting Bato West upang makilala ang mga miyembro ng LGBTQIA+ sa ating komunidad. Sa pamamagitan ng impormasyong ito, mas maipaplano at maisasagawa ang mga aktibidad at kaganapan para sa Pride Month.',
+                            style:
+                            TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w300
+                            ),
+                            textAlign: TextAlign.justify,
                           ),
                         ),
 
                         Container(
+                          margin: EdgeInsets.only(top: 8),
                           child: Text(
-                            'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.'
+                            'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.',
+                            style:
+                            TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400
+                            ),
+                            textAlign: TextAlign.left,
                           ),
                         )
                       ],
@@ -200,6 +229,7 @@ class LGBTQ extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -213,6 +243,7 @@ class LGBTQ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Last Name:'
                                 ),
@@ -239,6 +270,7 @@ class LGBTQ extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -252,8 +284,9 @@ class LGBTQ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
-                                  'First Name:'
+                                  'First Name:',
                                 ),
                               ),
                               Container(
@@ -281,6 +314,7 @@ class LGBTQ extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -294,6 +328,7 @@ class LGBTQ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Middle Name:'
                                 ),
@@ -323,6 +358,7 @@ class LGBTQ extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -336,6 +372,7 @@ class LGBTQ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Birthday:'
                                 ),
@@ -365,6 +402,7 @@ class LGBTQ extends StatelessWidget {
                           width: 330,
                           padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(16),
                             boxShadow: const [
                               BoxShadow(
@@ -378,6 +416,7 @@ class LGBTQ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                width: double.infinity,
                                 child: Text(
                                   'Sex Assigned at Birth:'
                                 ),

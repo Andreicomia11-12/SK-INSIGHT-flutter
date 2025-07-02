@@ -178,17 +178,14 @@ class Kkprofiling extends StatelessWidget {
                     ),
                     child: Column(
                       children: [
-                        Container(child: Text('KK Survey Questionnaire')),
-
-                        Container(child: Text('TO THE RESPONDENTS:')),
-
                         Container(
                           width: double.infinity,
                           child: Text(
-                            'We are currently conducting a study that focuses on assessing the demographic information of the Katipunan ng Kabataan. We would like to ask your participation by taking your time to answer this questionnaire. Please read the questions carefully and answer them accurately',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
+                            'KK Survey Questionnaire',
+                            style:
+                            TextStyle(
+                                fontSize: 19,
+                                fontWeight: FontWeight.w500
                             ),
                             textAlign: TextAlign.left,
                           ),
@@ -197,36 +194,41 @@ class Kkprofiling extends StatelessWidget {
                         Container(
                           width: double.infinity,
                           child: Text(
-                            'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                            'TO THE RESPONDENTS:',
+                            style:
+                            TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500
                             ),
                             textAlign: TextAlign.left,
                           ),
                         ),
 
                         Container(
+                          margin: EdgeInsets.only(top: 8),
                           child: Text(
                             'We are currently conducting a study that focuses on assessing the demographic information of the Katipunan ng Kabataan. We would like to ask your participation by taking your time to answer this questionnaire. Please read the questions carefully and answer them accurately',
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
+                            style:
+                            TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w300
                             ),
-                            textAlign: TextAlign.left,
+                            textAlign: TextAlign.justify,
                           ),
                         ),
 
                         Container(
+                          margin: EdgeInsets.only(top: 8),
                           child: Text(
                             'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.',
-                            style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
+                            style:
+                            TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400
                             ),
                             textAlign: TextAlign.left,
                           ),
-                        ),
+                        )
                       ],
                     ),
                   ),
