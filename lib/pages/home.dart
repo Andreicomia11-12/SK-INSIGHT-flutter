@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'KKProfiling.dart';
 import 'package:skinsight/pages/aboutus.dart';
 
 class Home extends StatelessWidget {
@@ -7,6 +8,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: const Color(0xFFD1E1F5),
       body: SingleChildScrollView(
         child: Column(
@@ -55,76 +57,80 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                  PopupMenuButton<String>(
-                    icon: const Icon(Icons.menu, color: Colors.white, size: 35),
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    elevation: 8,
-                    onSelected: (value) {
-                      if (value == 'educational') {
-                        print("Educational Assistance");
-                      } else if (value == 'profiling') {
-                        print("Profiling");
-                      }
-                    },
-                    itemBuilder: (BuildContext context) => [
-                      PopupMenuItem(
-                        value: 'educational',
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 8.0,
-                            horizontal: 12.0,
-                          ),
-                          child: Row(
-                            children: const [
-                              Icon(
-                                Icons.school,
-                                color: Colors.blueAccent,
-                                size: 20,
-                              ),
-                              SizedBox(width: 10),
-                              Text(
-                                'Educational Assistance',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      PopupMenuItem(
-                        value: 'profiling',
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 8.0,
-                            horizontal: 12.0,
-                          ),
-                          child: Row(
-                            children: const [
-                              Icon(Icons.person, color: Colors.green, size: 20),
-                              SizedBox(width: 10),
-                              Text(
-                                'SK Profiling',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                   Row(
-                    children: const [
-                      Icon(Icons.person, color: Colors.white),
-                      SizedBox(width: 10),
-                      Icon(Icons.notifications, color: Colors.white, size: 30),
+                    children: [
+                      PopupMenuButton<String>(
+                        icon: const Icon(Icons.menu, color: Colors.white, size: 35),
+                        color: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        elevation: 8,
+                        onSelected: (value) {
+                          if (value == 'educational') {
+                            print("Educational Assistance");
+                          } else if (value == 'profiling') {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Kkprofiling(),
+                              ),
+                            );
+                          }
+                        },
+                        itemBuilder: (BuildContext context) => [
+                          PopupMenuItem(
+                            value: 'educational',
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 8.0,
+                                horizontal: 12.0,
+                              ),
+                              child: Row(
+                                children: const [
+                                  Icon(
+                                    Icons.school,
+                                    color: Colors.blueAccent,
+                                    size: 20,
+                                  ),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    'Educational Assistance',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          PopupMenuItem(
+                            value: 'profiling',
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 8.0,
+                                horizontal: 12.0,
+                              ),
+                              child: Row(
+                                children: const [
+                                  Icon(Icons.person, color: Colors.green, size: 20),
+                                  SizedBox(width: 10),
+                                  Text(
+                                    'SK Profiling',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(width: 10),
+                      const Icon(Icons.notifications, color: Colors.white, size: 30),
                     ],
                   ),
                 ],
