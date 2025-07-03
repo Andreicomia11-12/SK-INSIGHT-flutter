@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skinsight/pages/educ.dart';
 import 'KKProfiling.dart';
 
 class LGBTQ extends StatelessWidget {
@@ -80,12 +81,25 @@ class LGBTQ extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
                           child: Row(
-                            children: const [
+                            children:  [
                               Icon(Icons.school, color: Colors.blueAccent, size: 20),
                               SizedBox(width: 10),
-                              Text(
-                                'Educational Assistance',
-                                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const educ(),
+                                    ),
+                                  );
+                                },
+                                child: const Text(
+                                  "Educational Assistance",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),),
                               ),
                             ],
                           ),

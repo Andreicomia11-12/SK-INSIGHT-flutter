@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/KKProfiling.dart';
 import 'package:skinsight/pages/LGBTQProfiling.dart';
+import 'package:skinsight/pages/educ.dart';
 import 'package:skinsight/pages/home.dart';
 import 'pages/signup.dart';
 import 'pages/login.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SK-INSIGHT',
-      home: LGBTQ(), // or Forgot() if you want that first
+      home: educ(), // or Forgot() if you want that first
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'KKProfiling.dart';
 import 'package:skinsight/pages/aboutus.dart';
+import 'educ.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -73,7 +74,7 @@ class Home extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const Kkprofiling(),
+                                builder: (context) => const educ(),
                               ),
                             );
                           }
@@ -113,16 +114,26 @@ class Home extends StatelessWidget {
                                 horizontal: 12.0,
                               ),
                               child: Row(
-                                children: const [
+                                children:  [
                                   Icon(Icons.person, color: Colors.green, size: 20),
                                   SizedBox(width: 10),
-                                  Text(
-                                    'SK Profiling',
-                                    style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w400,
+                                  TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const Kkprofiling(),
                                     ),
-                                  ),
+                                  );
+                                },
+                                child: const Text(
+                                  "SK Profiling",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400,
+                                  ),),
+                              ),
                                 ],
                               ),
                             ),
