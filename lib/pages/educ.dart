@@ -3,7 +3,6 @@ import 'package:skinsight/pages/req.dart';
 import 'KKProfiling.dart';
 import 'siblings_section.dart';
 
-
 class educ extends StatelessWidget {
   const educ({super.key});
 
@@ -43,9 +42,10 @@ class educ extends StatelessWidget {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(40),
-                          child:
-                          Image.asset('assets/logo.jpg',
-                            width: 40, height: 40,
+                          child: Image.asset(
+                            'assets/logo.jpg',
+                            width: 40,
+                            height: 40,
                           ),
                         ),
                       ),
@@ -61,30 +61,36 @@ class educ extends StatelessWidget {
                     ],
                   ),
 
+                  PopupMenuButton<String>(
+                    icon: const Icon(Icons.menu, color: Colors.white, size: 30),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    elevation: 8, // Shadow effect
+                    onSelected: (value) {
+                      if (value == 'educational') {
+                        print("Educational Assistance");
+                      } else if (value == 'profiling') {
+                        print("Profiling");
+                      }
+                    },
 
-                   PopupMenuButton<String>(
-                      icon: const Icon(Icons.menu, color: Colors.white, size: 30,),
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      elevation: 8, // Shadow effect
-                      onSelected: (value) {
-                        if (value == 'educational') {
-                          print("Educational Assistance");
-                        } else if (value == 'profiling') {
-                          print("Profiling");
-                        }
-                      },
-
-                      itemBuilder: (BuildContext context) => [
+                    itemBuilder: (BuildContext context) => [
                       PopupMenuItem(
                         value: 'educational',
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 8.0,
+                            horizontal: 12.0,
+                          ),
                           child: Row(
-                            children:  [
-                              Icon(Icons.school, color: Colors.blueAccent, size: 20),
+                            children: [
+                              Icon(
+                                Icons.school,
+                                color: Colors.blueAccent,
+                                size: 20,
+                              ),
                               SizedBox(width: 10),
                               TextButton(
                                 onPressed: () {
@@ -101,7 +107,8 @@ class educ extends StatelessWidget {
                                     color: Colors.black,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400,
-                                  ),),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
@@ -110,10 +117,17 @@ class educ extends StatelessWidget {
                       PopupMenuItem(
                         value: 'profiling',
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 8.0,
+                            horizontal: 12.0,
+                          ),
                           child: Row(
                             children: [
-                              const Icon(Icons.person, color: Colors.green, size: 20),
+                              const Icon(
+                                Icons.person,
+                                color: Colors.green,
+                                size: 20,
+                              ),
                               const SizedBox(width: 10),
                               TextButton(
                                 onPressed: () {
@@ -130,17 +144,16 @@ class educ extends StatelessWidget {
                                     color: Colors.black,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400,
-                                  ),),
+                                  ),
+                                ),
                               ),
-
                             ],
                           ),
                         ),
                       ),
                     ],
-                   ),
+                  ),
                   // Center: Hamburger menu
-
 
                   // Right: Person + Bell
                   Row(
@@ -174,522 +187,462 @@ class educ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
-                                child: Text(
-                                  'Last Name:'
-                                ),
+                                child: Text('I. Educational Assistance'),
                               ),
+                              Container(child: Text('Last Name:')),
                               Container(
                                 child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
+                                  decoration: InputDecoration(
+                                    labelText: 'Your Answer',
+                                  ),
                                 ),
-                              ),
                               ),
                             ],
                           ),
-                  ),
+                        ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'First Name:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('First Name:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Middle Name:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Middle Name:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Place of Birth:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Place of Birth:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Age:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Age:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Gender:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Gender:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Religion:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Religion:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Civil Status:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Civil Status:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Email:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Email:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Contact Number:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Contact Number:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Name of School:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Name of School:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'School Address:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('School Address:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Years in College:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(child: Text('Years in College:')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Types of Benefit being Applied:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      child: Text(
+                                        'Types of Benefit being Applied:',
+                                      ),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText:
+                                              'Your Answer(ex.Educational Assistance)',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer(ex.Educational Assistance)',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Father' + "'" + "s Name:"
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      child: Text('Father' + "'" + "s Name:"),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                    Container(child: Text('Contact Number')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
-                              ),
-                              Container(
-                                child: Text(
-                                  'Contact Number',
-                                ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                child: Text(
-                                  'Mother' + "'" + "s Name:"
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      child: Text('Mother' + "'" + "s Name:"),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                    Container(child: Text('Contact Number')),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
-                              ),
-                              Container(
-                                child: Text(
-                                  'Contact Number',
-                                ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
+
+                        Container(child: const Center(child: SiblingSection())),
 
                         Container(
-                          child: const Center(
-                            child: SiblingSection(),
-                          ),
+                          child: const Center(child: RequirementSection()),
                         ),
 
                         Container(
-                          child: const Center(
-                            child: RequirementSection(),
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text('Submit'),
                           ),
                         ),
-
                       ],
                     ),
                   ),
