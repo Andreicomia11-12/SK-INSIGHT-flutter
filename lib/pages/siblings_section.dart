@@ -12,7 +12,44 @@ class _SiblingSectionState extends State<SiblingSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    if (siblings.isEmpty) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const Text(
+            'Siblings Information:',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          ),
+          const SizedBox(height: 10),
+          ElevatedButton.icon(
+            onPressed: () {
+              setState(() {
+                siblings.add({'name': '', 'gender': '', 'age': ''});
+              });
+            },
+            icon: const Icon(Icons.add),
+            label: const Text('Add Sibling'),
+          ),
+        ],
+      );
+    }
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(20),
+      margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 30),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: const [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10,
+            spreadRadius: 2,
+            offset: Offset(0, 4),
+          ),
+        ],
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -33,7 +70,10 @@ class _SiblingSectionState extends State<SiblingSection> {
                       Expanded(
                         flex: 2,
                         child: TextFormField(
-                          decoration: const InputDecoration(labelText: 'Name'),
+                          decoration: const InputDecoration(
+                            labelText: 'Name',
+
+                          ),
                           onChanged: (value) => siblings[index]['name'] = value,
                         ),
                       ),
@@ -41,7 +81,10 @@ class _SiblingSectionState extends State<SiblingSection> {
                       Expanded(
                         flex: 1,
                         child: TextFormField(
-                          decoration: const InputDecoration(labelText: 'Gender'),
+                          decoration: const InputDecoration(
+                            labelText: 'Gender',
+
+                          ),
                           onChanged: (value) => siblings[index]['gender'] = value,
                         ),
                       ),
@@ -49,7 +92,9 @@ class _SiblingSectionState extends State<SiblingSection> {
                       Expanded(
                         flex: 1,
                         child: TextFormField(
-                          decoration: const InputDecoration(labelText: 'Age'),
+                          decoration: const InputDecoration(
+                            labelText: 'Age',
+                          ),
                           onChanged: (value) => siblings[index]['age'] = value,
                         ),
                       ),
