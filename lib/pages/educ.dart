@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'KKProfiling.dart';
+import 'siblings_section.dart';
 
 class educ extends StatelessWidget {
   const educ({super.key});
@@ -129,7 +130,7 @@ class educ extends StatelessWidget {
                                     fontWeight: FontWeight.w400,
                                   ),),
                               ),
-                                    
+
                             ],
                           ),
                         ),
@@ -674,6 +675,12 @@ class educ extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                        Container(
+                          child: const Center(
+                            child: SiblingSection(),
+                          ),
+                        )
 
                       ],
                     ),
