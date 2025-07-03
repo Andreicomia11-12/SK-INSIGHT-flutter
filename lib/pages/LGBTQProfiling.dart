@@ -41,9 +41,10 @@ class LGBTQ extends StatelessWidget {
                       Container(
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(40),
-                          child:
-                          Image.asset('assets/logo.jpg',
-                            width: 40, height: 40,
+                          child: Image.asset(
+                            'assets/logo.jpg',
+                            width: 40,
+                            height: 40,
                           ),
                         ),
                       ),
@@ -59,28 +60,43 @@ class LGBTQ extends StatelessWidget {
                     ],
                   ),
 
+                  PopupMenuButton<String>(
+                    icon: const Icon(Icons.menu, color: Colors.white, size: 30),
+                    color: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    elevation: 8, // Shadow effect
+                    onSelected: (value) {
+                      if (value == 'educational') {
+                        print("Educational Assistance");
+                      } else if (value == 'profiling') {
+                        print("Profiling");
+                      }
+                    },
 
-                   PopupMenuButton<String>(
-                      icon: const Icon(Icons.menu, color: Colors.white, size: 30,),
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      elevation: 8, // Shadow effect
-                      onSelected: (value) {
-                        if (value == 'educational') {
-                          print("Educational Assistance");
-                        } else if (value == 'profiling') {
-                          print("Profiling");
-                        }
-                      },
-
-                      itemBuilder: (BuildContext context) => [
+                    itemBuilder: (BuildContext context) => [
                       PopupMenuItem(
                         value: 'educational',
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 8.0,
+                            horizontal: 12.0,
+                          ),
                           child: Row(
+                            children: const [
+                              Icon(
+                                Icons.school,
+                                color: Colors.blueAccent,
+                                size: 20,
+                              ),
+                              SizedBox(width: 10),
+                              Text(
+                                'Educational Assistance',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w400,
+                                ),
                             children:  [
                               Icon(Icons.school, color: Colors.blueAccent, size: 20),
                               SizedBox(width: 10),
@@ -108,10 +124,17 @@ class LGBTQ extends StatelessWidget {
                       PopupMenuItem(
                         value: 'profiling',
                         child: Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
+                          padding: const EdgeInsets.symmetric(
+                            vertical: 8.0,
+                            horizontal: 12.0,
+                          ),
                           child: Row(
                             children: [
-                              const Icon(Icons.person, color: Colors.green, size: 20),
+                              const Icon(
+                                Icons.person,
+                                color: Colors.green,
+                                size: 20,
+                              ),
                               const SizedBox(width: 10),
                               TextButton(
                                 onPressed: () {
@@ -128,17 +151,16 @@ class LGBTQ extends StatelessWidget {
                                     color: Colors.black,
                                     fontSize: 15,
                                     fontWeight: FontWeight.w400,
-                                  ),),
+                                  ),
+                                ),
                               ),
-                                    
                             ],
                           ),
                         ),
                       ),
                     ],
-                   ),
+                  ),
                   // Center: Hamburger menu
-
 
                   // Right: Person + Bell
                   Row(
@@ -181,10 +203,9 @@ class LGBTQ extends StatelessWidget {
                           width: double.infinity,
                           child: Text(
                             'LGBTQIA+ Profiling',
-                            style:
-                            TextStyle(
+                            style: TextStyle(
                               fontSize: 19,
-                              fontWeight: FontWeight.w500
+                              fontWeight: FontWeight.w500,
                             ),
                             textAlign: TextAlign.left,
                           ),
@@ -194,10 +215,9 @@ class LGBTQ extends StatelessWidget {
                           width: double.infinity,
                           child: Text(
                             'TO THE RESPONDENTS:',
-                            style:
-                            TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w500,
                             ),
                             textAlign: TextAlign.left,
                           ),
@@ -207,10 +227,9 @@ class LGBTQ extends StatelessWidget {
                           margin: EdgeInsets.only(top: 8),
                           child: Text(
                             'Ang form na ito ay ginawa ng Sangguniang Kabataan ng Barangay Puting Bato West upang makilala ang mga miyembro ng LGBTQIA+ sa ating komunidad. Sa pamamagitan ng impormasyong ito, mas maipaplano at maisasagawa ang mga aktibidad at kaganapan para sa Pride Month.',
-                            style:
-                            TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w300
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w300,
                             ),
                             textAlign: TextAlign.justify,
                           ),
@@ -220,98 +239,12 @@ class LGBTQ extends StatelessWidget {
                           margin: EdgeInsets.only(top: 8),
                           child: Text(
                             'REST ASSURED THAT ALL INFORMATION GATHERED FROM THIS STUDY WILL BE TREATED WITH UTMOST CONFIDENTIALITY.',
-                            style:
-                            TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w400
+                            style: TextStyle(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w400,
                             ),
                             textAlign: TextAlign.left,
                           ),
-                        )
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                width: double.infinity,
-                                child: Text(
-                                  'Last Name:'
-                                ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
-                              ),
-                            ],
-                          ),
-                  ),
-
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            children: [
-                              Container(
-                                width: double.infinity,
-                                child: Text(
-                                  'First Name:',
-                                ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
-                                ),
-                              ),
-                              ),
-                            ],
-                          ),
                         ),
                       ],
                     ),
@@ -343,111 +276,186 @@ class LGBTQ extends StatelessWidget {
                             children: [
                               Container(
                                 width: double.infinity,
-                                child: Text(
-                                  'Middle Name:'
-                                ),
+                                child: Text('Last Name:'),
                               ),
                               Container(
                                 child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
+                                  decoration: InputDecoration(
+                                    labelText: 'Your Answer',
+                                  ),
                                 ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: double.infinity,
-                                child: Text(
-                                  'Birthday:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      width: double.infinity,
+                                      child: Text('First Name:'),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
 
-                  Container(
-                    alignment: Alignment.center,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
                         Container(
-                          margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                          width: 330,
-                          padding: const EdgeInsets.all(20),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(16),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Colors.black12,
-                                blurRadius: 10,
-                                spreadRadius: 2,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
+                          alignment: Alignment.center,
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Container(
-                                width: double.infinity,
-                                child: Text(
-                                  'Sex Assigned at Birth:'
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                              Container(
-                                child: TextFormField(
-                                decoration: InputDecoration(
-                                  labelText: 'Your Answer',
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      width: double.infinity,
+                                      child: Text('Middle Name:'),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
                               ),
                             ],
                           ),
                         ),
-                      ],
-                    ),
-                  ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      width: double.infinity,
+                                      child: Text('Birthday:'),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                width: 330,
+                                padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      width: double.infinity,
+                                      child: Text('Sex Assigned at Birth:'),
+                                    ),
+                                    Container(
+                                      child: TextFormField(
+                                        decoration: InputDecoration(
+                                          labelText: 'Your Answer',
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
 
                         Container(
                           alignment: Alignment.center,
@@ -461,6 +469,7 @@ class LGBTQ extends StatelessWidget {
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
                                 decoration: BoxDecoration(
+                                  color: Colors.white,
                                   borderRadius: BorderRadius.circular(16),
                                 ),
                                 child: Column(
@@ -472,53 +481,48 @@ class LGBTQ extends StatelessWidget {
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
                                       ),
+                                      dropdownColor: Colors.white,
                                       items: const [
                                         DropdownMenuItem(
                                           value: 'In School Youth',
                                           child: Text(
                                             'In School Youth',
-                                            style: TextStyle(
-                                            ),
+                                            style: TextStyle(),
                                           ),
                                         ),
                                         DropdownMenuItem(
                                           value: 'Lesbian',
                                           child: Text(
                                             'Lesbian',
-                                            style: TextStyle(
-                                            ),
+                                            style: TextStyle(),
                                           ),
                                         ),
                                         DropdownMenuItem(
                                           value: 'Gay',
                                           child: Text(
                                             'Gay',
-                                            style: TextStyle(
-                                            ),
+                                            style: TextStyle(),
                                           ),
                                         ),
                                         DropdownMenuItem(
                                           value: 'Transgender',
                                           child: Text(
                                             'Transgender',
-                                            style: TextStyle(
-                                            ),
+                                            style: TextStyle(),
                                           ),
                                         ),
                                         DropdownMenuItem(
                                           value: 'Intersex',
                                           child: Text(
                                             'Intersex',
-                                            style: TextStyle(
-                                            ),
+                                            style: TextStyle(),
                                           ),
                                         ),
                                         DropdownMenuItem(
                                           value: 'Asexual',
                                           child: Text(
                                             'Asexual',
-                                            style: TextStyle(
-                                            ),
+                                            style: TextStyle(),
                                           ),
                                         ),
                                       ],
@@ -532,7 +536,6 @@ class LGBTQ extends StatelessWidget {
                             ],
                           ),
                         ),
-
                       ],
                     ),
                   ),
