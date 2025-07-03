@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:skinsight/pages/req.dart';
 import 'KKProfiling.dart';
 import 'siblings_section.dart';
+
 
 class educ extends StatelessWidget {
   const educ({super.key});
@@ -680,7 +682,13 @@ class educ extends StatelessWidget {
                           child: const Center(
                             child: SiblingSection(),
                           ),
-                        )
+                        ),
+
+                        Container(
+                          child: const Center(
+                            child: RequirementSection(),
+                          ),
+                        ),
 
                       ],
                     ),
