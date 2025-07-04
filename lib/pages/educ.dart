@@ -187,6 +187,7 @@ class educ extends StatelessWidget {
                           child: Column(
                             children: [
                               Container(
+                                alignment: Alignment.centerLeft,
                                 child: Text('I. Educational Assistance'),
                               ),
                               Container(child: Text('Last Name:')),
@@ -638,9 +639,29 @@ class educ extends StatelessWidget {
                         ),
 
                         Container(
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Text('Submit'),
+                          margin: EdgeInsets.fromLTRB(28, 0, 0, 20),
+                          alignment: Alignment.centerLeft,
+                          child: SizedBox(
+                            width: 100, // Set your desired square size
+                            height: 50,
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text(
+                                'Submit',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ), // Or your preferred child
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF0A2C59),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    16,
+                                  ), // Adjust for roundness
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ],
