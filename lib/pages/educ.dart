@@ -184,12 +184,28 @@ class educ extends StatelessWidget {
                           margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                           width: 330,
                           padding: const EdgeInsets.all(20),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 10,
+                                spreadRadius: 2,
+                                offset: Offset(0, 4),
+                              ),
+                            ],
+                          ),
                           child: Column(
                             children: [
                               Container(
                                 child: Text('I. Educational Assistance'),
                               ),
-                              Container(child: Text('Last Name:')),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                child: Text(
+                                  'Last Name:')
+                                  ),
                               Container(
                                 child: TextFormField(
                                   decoration: InputDecoration(
@@ -211,9 +227,25 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('First Name:')),
+                                    Container(
+                                       alignment: Alignment.topLeft,
+                                      child: Text(
+                                        'First Name:')
+                                        ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -238,9 +270,25 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Middle Name:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text(
+                                        'Middle Name:')
+                                        ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -265,9 +313,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Place of Birth:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Place of Birth:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -292,9 +355,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Age:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Age:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -319,9 +397,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Gender:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Gender:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -346,9 +439,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Religion:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Religion:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -373,9 +481,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Civil Status:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Civil Status:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -400,9 +523,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Email:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Email:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -427,9 +565,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Contact Number:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Contact Number:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -454,9 +607,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Name of School:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Name of School:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -481,9 +649,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('School Address:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('School Address:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -508,9 +691,24 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
-                                    Container(child: Text('Years in College:')),
+                                    Container(
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Years in College:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -535,9 +733,22 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
                                     Container(
+                                      alignment: Alignment.topLeft,
                                       child: Text(
                                         'Types of Benefit being Applied:',
                                       ),
@@ -567,9 +778,22 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
                                     Container(
+                                      alignment: Alignment.topLeft,
                                       child: Text('Father' + "'" + "s Name:"),
                                     ),
                                     Container(
@@ -579,7 +803,11 @@ class educ extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Container(child: Text('Contact Number')),
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Contact Number:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
@@ -604,9 +832,22 @@ class educ extends StatelessWidget {
                                 margin: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                                 width: 330,
                                 padding: const EdgeInsets.all(20),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(16),
+                                  boxShadow: const [
+                                    BoxShadow(
+                                      color: Colors.black12,
+                                      blurRadius: 10,
+                                      spreadRadius: 2,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
                                 child: Column(
                                   children: [
                                     Container(
+                                      alignment: Alignment.topLeft,
                                       child: Text('Mother' + "'" + "s Name:"),
                                     ),
                                     Container(
@@ -616,7 +857,11 @@ class educ extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    Container(child: Text('Contact Number')),
+                                    Container(
+                                      margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                                      alignment: Alignment.topLeft,
+                                      child: Text('Contact Number:')
+                                      ),
                                     Container(
                                       child: TextFormField(
                                         decoration: InputDecoration(
