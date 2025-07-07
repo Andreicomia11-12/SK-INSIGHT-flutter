@@ -162,6 +162,10 @@ class _userProfileState extends State<userProfile> {
                   margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                 ),
                 Text('this is a container'),
+                  child: Container(
+                    child: Image.asset('assets/profile.jpg'),
+                  )
+                ),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                   child: Column(
