@@ -160,11 +160,21 @@ class _userProfileState extends State<userProfile> {
               ],
             ),
           ),
-
           Container(
-            margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+            child: Column(
+              children: [
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                  ),
+                  Text('this is a container'),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                  ),
+                  Text('this is also a container'),
+              ],
             ),
-            Text('this is a container'),
+          )
+          
 
         ],
       ),

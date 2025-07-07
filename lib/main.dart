@@ -3,6 +3,7 @@ import 'package:skinsight/pages/KKProfiling.dart';
 import 'package:skinsight/pages/LGBTQProfiling.dart';
 import 'package:skinsight/pages/educ.dart';
 import 'package:skinsight/pages/home.dart';
+import 'package:skinsight/pages/userProfile.dart';
 import 'pages/signup.dart';
 import 'pages/login.dart';
 import 'pages/forgot_pass.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SK-INSIGHT',
-      home: educ(), // or Forgot() if you want that first
+      home: userProfile(), // or Forgot() if you want that first
     );
   }
 }
