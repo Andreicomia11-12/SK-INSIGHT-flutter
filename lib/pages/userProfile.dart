@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'KKProfiling.dart';
 
-
 class userProfile extends StatefulWidget {
   const userProfile({super.key});
 
@@ -13,10 +12,7 @@ class _userProfileState extends State<userProfile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      decoration: BoxDecoration(
-          color: Colors.white
-      ),
+      decoration: BoxDecoration(color: Colors.white),
       child: Column(
         children: [
           Container(
@@ -101,7 +97,6 @@ class _userProfileState extends State<userProfile> {
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.w400,
-
                               ),
                             ),
                           ],
@@ -165,17 +160,17 @@ class _userProfileState extends State<userProfile> {
               children: [
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                  ),
-                  Text('this is a container'),
+                ),
+                Text('this is a container'),
                 Container(
                   margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+                  child: Column(
+                    children: [Text('Test T. Test'), Text('Test1@gmail.com')],
                   ),
-                  Text('this is also a container'),
+                ),
               ],
             ),
-          )
-          
-
+          ),
         ],
       ),
     );
