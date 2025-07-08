@@ -16,8 +16,8 @@ class _userProfileState extends State<userProfile> {
       child: Column(
         children: [
           Container(
-            margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
-            width: 335,
+            margin: const EdgeInsets.fromLTRB(15, 60, 15, 0),
+            width: double.infinity,
             height: 70,
             padding: const EdgeInsets.symmetric(horizontal: 25),
             decoration: BoxDecoration(
@@ -160,7 +160,7 @@ class _userProfileState extends State<userProfile> {
             child: Container(
               margin: EdgeInsets.fromLTRB(15, 20, 10, 10),
               padding: EdgeInsets.all(10),
-              width: 95,
+              width: 120,
               decoration: BoxDecoration(
                 color: Colors.white, // background color
                 borderRadius: BorderRadius.circular(5),
@@ -168,7 +168,7 @@ class _userProfileState extends State<userProfile> {
               child: const Text(
                 'User Profile',
                 style: TextStyle(
-                  fontSize: 10,
+                  fontSize: 13,
                   fontWeight: FontWeight.w500,
                   color: Colors.black,
                   decoration: TextDecoration.none,
@@ -181,7 +181,7 @@ class _userProfileState extends State<userProfile> {
             alignment: Alignment.topCenter,
             children: [
               Container(
-                margin: EdgeInsets.only(top: 100, left: 15, right: 15),
+                margin: EdgeInsets.only(top: 90, left: 15, right: 15),
                 padding: EdgeInsets.all(10),
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -196,25 +196,36 @@ class _userProfileState extends State<userProfile> {
                       margin: EdgeInsets.fromLTRB(0, 35, 0, 0),
                       child: Column(
                         children: [
-                          const Text(
-                            'Test T. Tests',
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.black,
-                              decoration: TextDecoration.none,
+                          Container(
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                                  child:
+                                  const Text(
+                                    'Test T. Tests',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.black,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  ),
+                                ),
+                                const Text(
+                                  'test@example.com',
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Colors.grey,
+                                    decoration: TextDecoration.underline,
+                                    decorationColor: Colors.grey,
+                                    decorationStyle: TextDecorationStyle.solid,
+                                    decorationThickness: 2,
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                          const Text(
-                            'test@example.com',
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.grey,
-                              decoration: TextDecoration.underline,
-                              decorationColor: Colors.grey,
-                              decorationStyle: TextDecorationStyle.solid,
-                              decorationThickness: 2,
-                            ),
-                          ),
+                          )
+
                         ],
                       ),
                     ),
@@ -226,14 +237,19 @@ class _userProfileState extends State<userProfile> {
               // The circle profile image
               Container(
                 margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
-                width: 100,
-                height: 100,
+                width: 125,
+                height: 125,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.white,
-                  border: Border.all(color: Colors.black12, width: 2),
+                  border: Border.all(color: Colors.white12, width: 2),
+                  image: DecorationImage(
+                    image: AssetImage('assets/profile.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
+              )
+
             ],
           ),
         ],

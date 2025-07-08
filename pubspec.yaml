@@ -23,9 +23,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/logo.jpg
-    - assets/sk.jpg
-    - assets/home.jpg
+    - assets/
 
   # Uncomment and configure this if you add custom fonts
   # fonts:
