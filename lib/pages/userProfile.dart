@@ -180,9 +180,8 @@ class _userProfileState extends State<userProfile> {
           Stack(
             alignment: Alignment.topCenter,
             children: [
-              // The card, with top margin to make space for the circle
               Container(
-                margin: EdgeInsets.only(top: 60, left: 15, right: 15),
+                margin: EdgeInsets.only(top: 100, left: 15, right: 15),
                 padding: EdgeInsets.all(10),
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -190,17 +189,36 @@ class _userProfileState extends State<userProfile> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Add more fields here
-                    const Text(
-                      'Name: Test T. Tests',
-                      style: TextStyle(fontSize: 16),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 35, 0, 0),
+                      child: Column(
+                        children: [
+                          const Text(
+                            'Test T. Tests',
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.black,
+                              decoration: TextDecoration.none,
+                            ),
+                          ),
+                          const Text(
+                            'test@example.com',
+                            style: TextStyle(
+                              fontSize: 13,
+                              color: Colors.grey,
+                              decoration: TextDecoration.underline,
+                              decorationColor: Colors.grey,
+                              decorationStyle: TextDecorationStyle.solid,
+                              decorationThickness: 2,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    const Text(
-                      'Email: test@example.com',
-                      style: TextStyle(fontSize: 16),
-                    ),
+
                     // More fields like age, address, etc.
                   ],
                 ),
@@ -213,17 +231,11 @@ class _userProfileState extends State<userProfile> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.white,
-                  border: Border.all(
-                    color: Colors.black12,
-                    width: 2,
-                  ),
+                  border: Border.all(color: Colors.black12, width: 2),
                 ),
-                
               ),
             ],
           ),
-
-
         ],
       ),
     );
