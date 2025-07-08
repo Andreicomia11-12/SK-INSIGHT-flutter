@@ -12,7 +12,7 @@ class _userProfileState extends State<userProfile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.white),
+      color: Color(0xFFD1E1F5),
       child: Column(
         children: [
           Container(
@@ -123,7 +123,7 @@ class _userProfileState extends State<userProfile> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const Kkprofiling(),
+                                    builder: (context) => Kkprofiling(),
                                   ),
                                 );
                               },
@@ -155,26 +155,54 @@ class _userProfileState extends State<userProfile> {
               ],
             ),
           ),
-          Container(
-            child: Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          Align(
+            alignment: Alignment.topLeft,
+            child: Container(
+              margin: EdgeInsets.fromLTRB(15, 20, 10, 10),
+              padding: EdgeInsets.all(10),
+              width: 95,
+              decoration: BoxDecoration(
+                color: Colors.white, // background color
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: const Text(
+                'User Profile',
+                style: TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
                 ),
-                Text('this is a container'),
-                  child: Container(
-                    child: Image.asset('assets/profile.jpg'),
-                  )
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
-                  child: Column(
-                    children: [Text('Test T. Test'), Text('Test1@gmail.com')],
-                  ),
-                ),
-              ],
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 15,),
+            padding: EdgeInsets.all(10),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.white, // background color
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Add more fields here
+                const Text(
+                  'Name: Test T. Test',
+                  style: TextStyle(fontSize: 16),
+                ),
+                const Text(
+                  'Email: test@example.com',
+                  style: TextStyle(fontSize: 16),
+                ),
+                // More fields like age, address, etc.
+              ],
+            ),
+          )
+
+
         ],
       ),
     );
