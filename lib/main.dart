@@ -13,6 +13,8 @@ import 'pages/forgotpass3.dart';
 import 'pages/aboutus.dart';
 import 'pages/home.dart';
 import 'pages/KKProfiling.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -26,6 +28,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SK-INSIGHT',
+        theme: ThemeData(
+          textTheme: GoogleFonts.poppinsTextTheme(), // or any Google Font
+        ),
       home: userProfile(), // or Forgot() if you want that first
     );
   }
