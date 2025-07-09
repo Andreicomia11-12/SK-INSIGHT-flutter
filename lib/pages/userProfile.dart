@@ -196,20 +196,19 @@ class _userProfileState extends State<userProfile> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // Add more fields here
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                    // Centered name/email at the top
+                    Center(
                       child: Column(
                         children: [
                           Container(
+                            margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
                             child: Column(
                               children: [
                                 Container(
                                   margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                                  child:
-                                   Text(
+                                  child: Text(
                                     'Test T. Tests',
                                     style: GoogleFonts.poppins(
                                       fontSize: 17,
@@ -231,16 +230,142 @@ class _userProfileState extends State<userProfile> {
                                 ),
                               ],
                             ),
-                          )
-
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 15),
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10, 30, 0, 0),
+                            child: Text(
+                              'Full Name',
+                              style: GoogleFonts.poppins(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                                decoration: TextDecoration.none,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(4),
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFE8E8E8),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Container(
+                              margin: EdgeInsets.symmetric(horizontal: 15),
+                              child: Text(
+                                'Test T. Test',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.black54,
+                                  decoration: TextDecoration.none,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
 
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                child: Text(
+                                  'Age',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    decoration: TextDecoration.none,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(4),
+                                width: 135,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFE8E8E8),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    '22',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black54,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  ),
+                                )
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                child: Text(
+                                  'Gender',
+                                  style: GoogleFonts.poppins(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    decoration: TextDecoration.none,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.all(4),
+                                width: 135,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFE8E8E8),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Container(
+                                  alignment: Alignment.center,
+                                  child: Text(
+                                    'Male',
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black54,
+                                      decoration: TextDecoration.none,
+                                    ),
+                                  ),
+                                )
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                     // More fields like age, address, etc.
                   ],
                 ),
+                
               ),
+              
               // The circle profile image
               Container(
                 margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
