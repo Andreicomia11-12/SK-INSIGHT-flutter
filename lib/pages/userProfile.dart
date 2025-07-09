@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'KKProfiling.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class userProfile extends StatefulWidget {
   const userProfile({super.key});
 
@@ -58,7 +57,7 @@ class _userProfileState extends State<userProfile> {
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                         decoration: TextDecoration.none,
-                        fontFamily: 'Poppins'
+                        fontFamily: 'Poppins',
                       ),
                     ),
                   ],
@@ -182,8 +181,6 @@ class _userProfileState extends State<userProfile> {
             ),
           ),
 
-
-
           Stack(
             alignment: Alignment.topCenter,
             children: [
@@ -207,7 +204,7 @@ class _userProfileState extends State<userProfile> {
                             child: Column(
                               children: [
                                 Container(
-                                  margin: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                                   child: Text(
                                     'Test T. Tests',
                                     style: GoogleFonts.poppins(
@@ -226,6 +223,36 @@ class _userProfileState extends State<userProfile> {
                                     color: Colors.grey,
                                     decoration: TextDecoration.underline,
                                     decorationColor: Colors.grey,
+                                  ),
+                                ),
+                                Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        margin: EdgeInsets.fromLTRB(0, 0, 3, 0),
+                                        child: Text(
+                                          'Not Verified',
+                                          style: GoogleFonts.poppins(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w400,
+                                            color: const Color.fromARGB(
+                                              255,
+                                              0,
+                                              0,
+                                              0,
+                                            ),
+                                            decoration: TextDecoration.none,
+                                          ),
+                                        ),
+                                      ),
+
+                                      Icon(
+                                        Icons.check_circle,
+                                        color: Colors.grey,
+                                        size: 20,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ],
@@ -315,6 +342,10 @@ class _userProfileState extends State<userProfile> {
                                 ),
                               ],
                             ),
+
+                              ),
+                            ],
+
                           ),
                         ),
 
@@ -355,6 +386,8 @@ class _userProfileState extends State<userProfile> {
                                 ),
                               ],
                             ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -487,9 +520,8 @@ class _userProfileState extends State<userProfile> {
                     ),
                   ],
                 ),
-                
               ),
-              
+
               // The circle profile image
               Container(
                 margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -511,6 +543,7 @@ class _userProfileState extends State<userProfile> {
 
           Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Align(
                   alignment: Alignment.topLeft,
@@ -534,9 +567,39 @@ class _userProfileState extends State<userProfile> {
                     ),
                   ),
                 ),
+                Align(
+                  child: Container(
+                    alignment: Alignment.topRight,
+                    margin: EdgeInsets.fromLTRB(25, 20, 25, 10),
+                    child: ElevatedButton.icon(
+                      onPressed: () {},
+                      label: Padding(
+                        padding: EdgeInsetsGeometry.symmetric(
+                          horizontal: 8,
+                          vertical: 8.5,
+                        ),
+                        child: Row(
+                          children: [
+                            Icon(Icons.logout, color: Colors.white),
+                            Text(
+                              'Log out',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color(0xFF0A2C59),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadiusGeometry.circular(6),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
