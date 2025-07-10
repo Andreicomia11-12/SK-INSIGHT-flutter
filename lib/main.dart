@@ -11,8 +11,6 @@ import 'pages/forgotpass1.dart';
 import 'pages/forgotpass2.dart';
 import 'pages/forgotpass3.dart';
 import 'pages/aboutus.dart';
-import 'pages/home.dart';
-import 'pages/KKProfiling.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -22,16 +20,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'SK-INSIGHT',
-        theme: ThemeData(
-          textTheme: GoogleFonts.poppinsTextTheme(), // or any Google Font
-        ),
-      home: userProfile(), // or Forgot() if you want that first
+      theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
+      home: userProfile(), // or any other screen like Login() if needed
     );
   }
 }
