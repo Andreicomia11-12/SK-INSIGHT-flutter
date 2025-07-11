@@ -318,6 +318,9 @@ class _userProfileState extends State<userProfile> {
   }
 
   void _showVerifyAccountModal() {
+    final _formKey = GlobalKey<FormState>();
+    final TextEditingController _emailController = TextEditingController();
+
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -332,59 +335,86 @@ class _userProfileState extends State<userProfile> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  margin: EdgeInsetsGeometry.symmetric(vertical: 10),
-                  child: Text(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text(
                     'Account Verification',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
+                  const SizedBox(height: 20),
+                  TextFormField(
+                    controller: _emailController,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: const InputDecoration(
+                      labelText: 'Email Address',
+                      border: OutlineInputBorder(),
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter your email';
+                      }
+                      final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
+                      if (!emailRegex.hasMatch(value)) {
+                        return 'Enter a valid email address';
+                      }
+                      return null;
+                    },
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 10,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          backgroundColor: Colors.grey[300],
+                        ),
+                        child: const Text(
                           'Cancel',
                           style: TextStyle(color: Colors.black),
                         ),
+                      ),
+                      ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            // Trigger your verification logic here using _emailController.text
+                            print('Verifying email: ${_emailController.text}');
+                            Navigator.of(
+                              context,
+                            ).pop(); // Close modal after action
+                          }
+                        },
                         style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
                           padding: const EdgeInsets.symmetric(
                             horizontal: 12,
                             vertical: 10,
                           ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          backgroundColor: const Color(0xFF0A2C59),
                         ),
-                      ),
-                    ),
-                    Container(
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           'Verify',
                           style: TextStyle(color: Colors.white),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF0A2C59),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 10,
-                          ),
-                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         );
