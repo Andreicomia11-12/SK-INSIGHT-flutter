@@ -25,7 +25,10 @@ class _userProfileState extends State<userProfile> {
                 alignment: Alignment.centerLeft,
                 child: Container(
                   margin: const EdgeInsets.only(top: 15, left: 25),
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(5),
@@ -45,8 +48,12 @@ class _userProfileState extends State<userProfile> {
                 alignment: Alignment.topCenter,
                 children: [
                   Container(
-                    margin:
-                    const EdgeInsets.only(top: 60, left: 25, right: 25, bottom: 10),
+                    margin: const EdgeInsets.only(
+                      top: 60,
+                      left: 25,
+                      right: 25,
+                      bottom: 10,
+                    ),
                     padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -74,8 +81,11 @@ class _userProfileState extends State<userProfile> {
                               'Not Verified',
                               style: GoogleFonts.poppins(fontSize: 12),
                             ),
-                            const Icon(Icons.check_circle,
-                                color: Colors.grey, size: 20),
+                            const Icon(
+                              Icons.check_circle,
+                              color: Colors.grey,
+                              size: 20,
+                            ),
                           ],
                         ),
                         const SizedBox(height: 10),
@@ -86,7 +96,10 @@ class _userProfileState extends State<userProfile> {
                             Expanded(child: _buildLabelValue('Gender', 'Male')),
                           ],
                         ),
-                        _buildLabelValue('Youth Classification', 'In School Youth'),
+                        _buildLabelValue(
+                          'Youth Classification',
+                          'In School Youth',
+                        ),
                         _buildLabelValue('Civil Status', 'Single'),
                         _buildLabelValue('Purok', 'Purok 69'),
                       ],
@@ -127,7 +140,9 @@ class _userProfileState extends State<userProfile> {
                         ),
                         elevation: 2,
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 15, vertical: 10),
+                          horizontal: 15,
+                          vertical: 10,
+                        ),
                       ),
                       child: Text(
                         'Verify Account',
@@ -144,9 +159,11 @@ class _userProfileState extends State<userProfile> {
                       icon: const Icon(Icons.logout, color: Colors.white),
                       label: Text(
                         'Log out',
-                        style: GoogleFonts.poppins(color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w500),
+                        style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF0A2C59),
@@ -154,7 +171,9 @@ class _userProfileState extends State<userProfile> {
                           borderRadius: BorderRadius.circular(6),
                         ),
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 10),
+                          horizontal: 12,
+                          vertical: 10,
+                        ),
                       ),
                     ),
                   ],
@@ -193,11 +212,7 @@ class _userProfileState extends State<userProfile> {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(40),
-                child: Image.asset(
-                  'assets/logo.jpg',
-                  width: 40,
-                  height: 40,
-                ),
+                child: Image.asset('assets/logo.jpg', width: 40, height: 40),
               ),
               const SizedBox(width: 10),
               const Text(
@@ -322,12 +337,53 @@ class _userProfileState extends State<userProfile> {
               children: [
                 Container(
                   margin: EdgeInsetsGeometry.symmetric(vertical: 10),
-                  child: Text('Account Verification', style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
+                  child: Text(
+                    'Account Verification',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                   ),
-                  ),
-                )
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Cancel',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 10,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text(
+                          'Verify',
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF0A2C59),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 10,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
@@ -335,6 +391,4 @@ class _userProfileState extends State<userProfile> {
       },
     );
   }
-
-
 }
