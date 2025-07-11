@@ -320,7 +320,14 @@ class _userProfileState extends State<userProfile> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                
+                Container(
+                  margin: EdgeInsetsGeometry.symmetric(vertical: 10),
+                  child: Text('Account Verification', style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  ),
+                )
               ],
             ),
           ),
