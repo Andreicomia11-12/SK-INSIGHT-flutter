@@ -117,7 +117,7 @@ class _userProfileState extends State<userProfile> {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        print("Verify Account");
+                        _showVerifyAccountModal();
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -301,4 +301,33 @@ class _userProfileState extends State<userProfile> {
       ),
     );
   }
+
+  void _showVerifyAccountModal() {
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Container(
+            padding: const EdgeInsets.all(25),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+
 }
