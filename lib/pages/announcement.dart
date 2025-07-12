@@ -24,9 +24,7 @@ class _AnnouncementState extends State<Announcement> {
                 alignment: Alignment.centerLeft,
                 child: Container(
                   margin: const EdgeInsets.only(top: 15, left: 25),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10,
-                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
                     'Announcements',
                     style: GoogleFonts.poppins(
@@ -41,49 +39,75 @@ class _AnnouncementState extends State<Announcement> {
               Container(
                 alignment: Alignment.topCenter,
                 margin: const EdgeInsets.only(
-                      top: 30,
-                      left: 25,
-                      right: 25,
-                      bottom: 10,
-                    ),
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
+                  top: 30,
+                  left: 25,
+                  right: 25,
+                  bottom: 10,
+                ),
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                ),
                 child: Column(
-                  
-                children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-                    width: double.infinity,
-                    child: Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 10,
+                      ),
+                      width: double.infinity,
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
+                        children: [
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 0, 0, 5),
+                            child: Container(
+                              child: Text(
+                                'CLEANUP DRIVE',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: Container(
+                              child: Text(
+                                '06-13-24',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
                             margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
-                            child:
-                              Container(
-                                  child: Text('CLEANUP DRIVE',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 17
-                        ),))),
-                        Container(child: Container(child: Text('06-13-24'))),
-                        Container(child: Container(child: Text('Community Cleanup'))),
-                      ],
+                            child: Container(
+                              child: Text(
+                                'Community Cleanup',
+                                style: GoogleFonts.poppins(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text('View Details'),
+                    Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text('View Details'),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              ),
-              
+
               const SizedBox(height: 20),
             ],
           ),
