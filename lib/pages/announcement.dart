@@ -20,23 +20,55 @@ class _AnnouncementState extends State<Announcement> {
             children: [
               _buildTopBar(),
 
-              Align(child: Container(child: Text('ANNOUNCEMENTS'))),
-
-              // Profile Card with image
-              Stack(
-                alignment: Alignment.topCenter,
-                children: [
-                  Container(child: Container(child: Text('CLEANUP DRIVE'))),
-                ],
-              ),
-              Container(child: Container(child: Text('06-13-24'))),
-              Container(child: Container(child: Text('Community Cleanup'))),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('View Details'),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  margin: const EdgeInsets.only(top: 15, left: 25),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                  ),
+                  child: Text(
+                    'Announcements',
+                    style: GoogleFonts.poppins(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
               ),
+
+              // Profile Card with image
+              Container(
+                alignment: Alignment.topCenter,
+                margin: const EdgeInsets.only(
+                      top: 30,
+                      left: 25,
+                      right: 25,
+                      bottom: 10,
+                    ),
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                child: Column(
+                  
+                children: [
+                  Container(child: Container(child: Text('CLEANUP DRIVE'))),
+                  Container(child: Container(child: Text('06-13-24'))),
+                  Container(child: Container(child: Text('Community Cleanup'))),
+                  Container(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('View Details'),
+                    ),
+                  ),
+                ],
+              ),
+              
+              
+              ),
+              
               const SizedBox(height: 20),
             ],
           ),
