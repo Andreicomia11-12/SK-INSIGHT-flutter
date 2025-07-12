@@ -20,25 +20,17 @@ class _AnnouncementState extends State<Announcement> {
             children: [
               _buildTopBar(),
 
-              Align(
-                child: Container(
-                  child: Text(
-                    'ANNOUNCEMENTS'
-                  ),
-                ),
-              ),
+              Align(child: Container(child: Text('ANNOUNCEMENTS'))),
 
               // Profile Card with image
               Stack(
                 alignment: Alignment.topCenter,
                 children: [
-                  Container(
-                    child: Container(
-                      child: Text('CLEANUP DRIVE'),
-                    ),
-                  ),
+                  Container(child: Container(child: Text('CLEANUP DRIVE'))),
                 ],
               ),
+              Container(child: Container(child: Text('06-13-24'))),
+              Container(child: Container(child: Text('Community Cleanup'))),
               const SizedBox(height: 20),
             ],
           ),
@@ -46,6 +38,7 @@ class _AnnouncementState extends State<Announcement> {
       ),
     );
   }
+
   // Top Navigation Bar
   Widget _buildTopBar() {
     return Container(
