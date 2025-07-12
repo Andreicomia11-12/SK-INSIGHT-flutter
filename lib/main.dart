@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/KKProfiling.dart';
 import 'package:skinsight/pages/LGBTQProfiling.dart';
+import 'package:skinsight/pages/announcement.dart';
 import 'package:skinsight/pages/educ.dart';
 import 'package:skinsight/pages/home.dart';
 import 'package:skinsight/pages/userProfile.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: userProfile(), // or any other screen like Login() if needed
+      home: Announcement(), // or any other screen like Login() if needed
     );
   }
 }
