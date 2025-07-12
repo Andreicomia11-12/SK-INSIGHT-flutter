@@ -31,6 +31,12 @@ class _AnnouncementState extends State<Announcement> {
               ),
               Container(child: Container(child: Text('06-13-24'))),
               Container(child: Container(child: Text('Community Cleanup'))),
+              Container(
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('View Details'),
+                ),
+              ),
               const SizedBox(height: 20),
             ],
           ),
