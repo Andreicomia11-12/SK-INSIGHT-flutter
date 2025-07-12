@@ -490,6 +490,7 @@ class _userProfileState extends State<userProfile> {
                             RegExp(r'^\d{6}$').hasMatch(otp)) {
                           print('Entered OTP: $otp');
                           Navigator.of(context).pop();
+                          _showTYModal();
                           // Continue to your verification logic here
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -523,4 +524,77 @@ class _userProfileState extends State<userProfile> {
       },
     );
   }
+
+  void _showTYModal() {
+    List<FocusNode> _focusNodes = List.generate(6, (index) => FocusNode());
+    List<TextEditingController> _otpControllers = List.generate(
+      6,
+      (index) => TextEditingController(),
+    );
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: SizedBox(
+            width: 300,
+            height: 220, // or 250 for more space
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.check_circle, color: Colors.green, size: 50),
+                  const SizedBox(height: 20),
+                  Text(
+                    'Account Verification Successful',
+                    style: TextStyle(fontSize: 20),
+                    textAlign: TextAlign.center,
+                  ),
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        userProfile();
+                      },
+                      child: Text('Ok', style: TextStyle(color: Colors.white)),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF0A2C59),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  // void _showTYModal() {
+  //   showDialog(
+  //     context: context,
+  //     barrierDismissible: false,
+  //     builder: (BuildContext context) {
+  //       return Dialog(
+  //         shape: RoundedRectangleBorder(
+  //           borderRadius: BorderRadius.circular(20),
+  //         ),
+  //         child: Container(
+  //           width: 300,
+  //           padding: const EdgeInsets.all(25),
+  //           decoration: BoxDecoration(
+  //             color: Colors.white,
+  //             borderRadius: BorderRadius.circular(20),
+  //           ),
+  //         ),
+  //       );
+  //     },
+  //   );
+  // }
 }
