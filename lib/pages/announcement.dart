@@ -54,9 +54,26 @@ class _AnnouncementState extends State<Announcement> {
                 child: Column(
                   
                 children: [
-                  Container(child: Container(child: Text('CLEANUP DRIVE'))),
-                  Container(child: Container(child: Text('06-13-24'))),
-                  Container(child: Container(child: Text('Community Cleanup'))),
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                    width: double.infinity,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                            margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                            child:
+                              Container(
+                                  child: Text('CLEANUP DRIVE',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17
+                        ),))),
+                        Container(child: Container(child: Text('06-13-24'))),
+                        Container(child: Container(child: Text('Community Cleanup'))),
+                      ],
+                    ),
+                  ),
                   Container(
                     child: ElevatedButton(
                       onPressed: () {},
@@ -65,8 +82,6 @@ class _AnnouncementState extends State<Announcement> {
                   ),
                 ],
               ),
-              
-              
               ),
               
               const SizedBox(height: 20),
