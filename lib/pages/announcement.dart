@@ -23,8 +23,7 @@ class _AnnouncementState extends State<Announcement> {
               Align(
                 child: Container(
                   child: Text(
-                    'User Profile',
-                   
+                    'ANNOUNCEMENTS'
                   ),
                 ),
               ),
@@ -34,9 +33,10 @@ class _AnnouncementState extends State<Announcement> {
                 alignment: Alignment.topCenter,
                 children: [
                   Container(
-                    
+                    child: Container(
+                      child: Text('CLEANUP DRIVE'),
+                    ),
                   ),
-
                 ],
               ),
               const SizedBox(height: 20),
