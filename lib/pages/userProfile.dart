@@ -438,6 +438,17 @@ class _userProfileState extends State<userProfile> {
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
           ),
+          child:
+          Column(
+            children: [
+              Container(
+                child: Text(
+                  'Account Verification',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              )
+            ],
+          )
         ),
       );
     },
