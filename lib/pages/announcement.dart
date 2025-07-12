@@ -37,17 +37,6 @@ class _AnnouncementState extends State<Announcement> {
                       child: Text('CLEANUP DRIVE'),
                     ),
                   ),
-                  Container(
-                    child: Container(
-                      child: Text('06-13-24'),
-                    ),
-                  ),
-                  Container(
-                    child: Container(
-                      child: Text('Community Cleanup'),
-                    ),
-                  ),
-
                 ],
               ),
               const SizedBox(height: 20),
