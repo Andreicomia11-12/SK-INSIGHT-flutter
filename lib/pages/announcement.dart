@@ -34,7 +34,17 @@ class _AnnouncementState extends State<Announcement> {
                 children: [
                   Container(
                     child: Container(
-                      child: Text('ANG BURNEK NI DANIEL CLEARING OPERATION'),
+                      child: Text('CLEANUP DRIVE'),
+                    ),
+                  ),
+                  Container(
+                    child: Container(
+                      child: Text('06-13-24'),
+                    ),
+                  ),
+                  Container(
+                    child: Container(
+                      child: Text('Community Cleanup'),
                     ),
                   ),
 
