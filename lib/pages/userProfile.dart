@@ -10,6 +10,9 @@ class userProfile extends StatefulWidget {
 }
 
 class _userProfileState extends State<userProfile> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -318,9 +321,6 @@ class _userProfileState extends State<userProfile> {
   }
 
   void _showVerifyAccountModal() {
-    final _formKey = GlobalKey<FormState>();
-    final TextEditingController _emailController = TextEditingController();
-
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -330,6 +330,7 @@ class _userProfileState extends State<userProfile> {
             borderRadius: BorderRadius.circular(20),
           ),
           child: Container(
+            width: 300,
             padding: const EdgeInsets.all(25),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -341,13 +342,12 @@ class _userProfileState extends State<userProfile> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const Text(
-                    'Account Verification',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    'Enter Your Email',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 15),
                   TextFormField(
                     controller: _emailController,
-                    keyboardType: TextInputType.emailAddress,
                     decoration: const InputDecoration(
                       labelText: 'Email Address',
                       border: OutlineInputBorder(),
@@ -368,17 +368,8 @@ class _userProfileState extends State<userProfile> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
+                        onPressed: () => Navigator.of(context).pop(),
                         style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 10,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
                           backgroundColor: Colors.grey[300],
                         ),
                         child: const Text(
@@ -389,24 +380,15 @@ class _userProfileState extends State<userProfile> {
                       ElevatedButton(
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            // Trigger your verification logic here using _emailController.text
-                            print('Verifying email: ${_emailController.text}');
-                            Navigator.of(context).pop(); // Close current modal
-                            _showOTPModal(); // Show success modal
+                            Navigator.of(context).pop();
+                            _showOTPModal();
                           }
                         },
                         style: ElevatedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 10,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(6),
-                          ),
                           backgroundColor: const Color(0xFF0A2C59),
                         ),
                         child: const Text(
-                          'Verify',
+                          'Send OTP',
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
@@ -422,37 +404,123 @@ class _userProfileState extends State<userProfile> {
   }
 
   void _showOTPModal() {
-  showDialog(
-    context: context,
-    barrierDismissible: false,
-    builder: (BuildContext context) {
-      return Dialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Container(
-          width: 300,
-          height: 220, 
-          padding: const EdgeInsets.all(25),
-          decoration: BoxDecoration(
-            color: Colors.white,
+    List<FocusNode> _focusNodes = List.generate(6, (index) => FocusNode());
+    List<TextEditingController> _otpControllers = List.generate(
+      6,
+      (index) => TextEditingController(),
+    );
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Dialog(
+          shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          child:
-          Column(
-            children: [
-              Container(
-                child: Text(
-                  'Account Verification',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          child: Container(
+            width: 300,
+            padding: const EdgeInsets.all(25),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Text(
+                  'Enter OTP',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-              )
-            ],
-          )
-        ),
-      );
-    },
-  );
-}
-
+                const SizedBox(height: 15),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: List.generate(6, (index) {
+                    return SizedBox(
+                      width: 35,
+                      child: TextField(
+                        controller: _otpControllers[index],
+                        focusNode: _focusNodes[index],
+                        keyboardType: TextInputType.number,
+                        maxLength: 1,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(fontSize: 18),
+                        decoration: const InputDecoration(
+                          counterText: "",
+                          border: OutlineInputBorder(),
+                        ),
+                        onChanged: (value) {
+                          if (value.isNotEmpty && index < 5) {
+                            _focusNodes[index + 1].requestFocus();
+                          } else if (value.isEmpty && index > 0) {
+                            _focusNodes[index - 1].requestFocus();
+                          }
+                        },
+                      ),
+                    );
+                  }),
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 10,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        backgroundColor: Colors.grey[300],
+                      ),
+                      child: const Text(
+                        'Cancel',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        String otp = _otpControllers.map((e) => e.text).join();
+                        if (otp.length == 6 &&
+                            RegExp(r'^\d{6}$').hasMatch(otp)) {
+                          print('Entered OTP: $otp');
+                          Navigator.of(context).pop();
+                          // Continue to your verification logic here
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Enter a valid 6-digit OTP'),
+                            ),
+                          );
+                        }
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 10,
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        backgroundColor: const Color(0xFF0A2C59),
+                      ),
+                      child: const Text(
+                        'Verify',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 }
