@@ -391,9 +391,8 @@ class _userProfileState extends State<userProfile> {
                           if (_formKey.currentState!.validate()) {
                             // Trigger your verification logic here using _emailController.text
                             print('Verifying email: ${_emailController.text}');
-                            Navigator.of(
-                              context,
-                            ).pop(); // Close modal after action
+                            Navigator.of(context).pop(); // Close current modal
+                            _showOTPModal(); // Show success modal
                           }
                         },
                         style: ElevatedButton.styleFrom(
@@ -421,4 +420,28 @@ class _userProfileState extends State<userProfile> {
       },
     );
   }
+
+  void _showOTPModal() {
+  showDialog(
+    context: context,
+    barrierDismissible: false,
+    builder: (BuildContext context) {
+      return Dialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Container(
+          width: 300,
+          height: 220, 
+          padding: const EdgeInsets.all(25),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+          ),
+        ),
+      );
+    },
+  );
+}
+
 }
