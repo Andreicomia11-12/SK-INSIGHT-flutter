@@ -99,9 +99,20 @@ class _AnnouncementState extends State<Announcement> {
                       ),
                     ),
                     Container(
+                      padding: EdgeInsets.fromLTRB(8, 0, 8, 10),
+                      width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('View Details'),
+                        child: Text(
+                          'View Details',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF0A2C59),
+                        ),
                       ),
                     ),
                   ],
