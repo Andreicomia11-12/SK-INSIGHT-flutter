@@ -227,8 +227,19 @@ class _AnnouncementState extends State<Announcement> {
       builder: (BuildContext context) {
         return Dialog(
           child: Container(
-            child: Container(
-              child: Text('Barangay Cleanup Drive'),
+            child: Column(
+              children: [
+                Container(child: Text('Barangay Cleanup Drive')),
+                Container(
+                  child: Text('Time&Date: 8:00 AM - 12:00 PM June 13, 2024'),
+                ),
+                Container(child: Text('Subject: Community Cleanup')),
+                Container(
+                  child: Text(
+                    'Details: Join us for a community cleanup drive to keep our barangay clean and green. Volunteers are welcome!',
+                  ),
+                ),
+              ],
             ),
           ),
         );
