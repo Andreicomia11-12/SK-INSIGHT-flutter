@@ -191,7 +191,7 @@ class _AnnouncementState extends State<Announcement> {
                 value: 'educational',
                 child: Row(
                   children: const [
-                    Icon(Icons.school, color: Colors.blueAccent, size: 20),
+                    Icon(Icons.school, color: Colors.blue, size: 20),
                     SizedBox(width: 10),
                     Text('Educational Assistance'),
                   ],
@@ -228,6 +228,7 @@ class _AnnouncementState extends State<Announcement> {
         return Dialog(
           child: Container(
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Container(child: Text('Barangay Cleanup Drive')),
                 Container(
@@ -239,11 +240,30 @@ class _AnnouncementState extends State<Announcement> {
                     'Details: Join us for a community cleanup drive to keep our barangay clean and green. Volunteers are welcome!',
                   ),
                 ),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).pop(); // Close the dialog
+                    Navigator.of(context).pushAndRemoveUntil(
+                      MaterialPageRoute(builder: (context) => Announcement()),
+                      (Route<dynamic> route) => false,
+                    );
+                  },
+                  style: TextButton.styleFrom(foregroundColor: Colors.black),
+                  child: Text(
+                    'Close',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
               ],
             ),
           ),
         );
       },
-    );
+    ).then((_) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => Announcement()),
+      );
+    });
   }
 }
