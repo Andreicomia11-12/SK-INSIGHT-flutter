@@ -124,13 +124,11 @@ class _AnnouncementState extends State<Announcement> {
 
               const SizedBox(height: 20),
             ],
-            
           ),
         ),
       ),
     );
   }
-  
 
   // Top Navigation Bar
   Widget _buildTopBar() {
@@ -229,7 +227,7 @@ class _AnnouncementState extends State<Announcement> {
       builder: (BuildContext context) {
         return Dialog(
           child: Container(
-            child: 
+            child: ,
           ),
         );
       },
