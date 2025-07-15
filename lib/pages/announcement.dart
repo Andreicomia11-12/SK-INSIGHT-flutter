@@ -102,7 +102,10 @@ class _AnnouncementState extends State<Announcement> {
                       padding: EdgeInsets.fromLTRB(8, 0, 8, 10),
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          _viewAnnouncementModal();
+                        },
                         child: Text(
                           'View Details',
                           style: TextStyle(
@@ -121,11 +124,13 @@ class _AnnouncementState extends State<Announcement> {
 
               const SizedBox(height: 20),
             ],
+            
           ),
         ),
       ),
     );
   }
+  
 
   // Top Navigation Bar
   Widget _buildTopBar() {
@@ -215,6 +220,17 @@ class _AnnouncementState extends State<Announcement> {
           ),
         ],
       ),
+    );
+  }
+
+  void _viewAnnouncementModal() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          child: Container(),
+        );
+      },
     );
   }
 }
