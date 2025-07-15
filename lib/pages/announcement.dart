@@ -227,7 +227,9 @@ class _AnnouncementState extends State<Announcement> {
       builder: (BuildContext context) {
         return Dialog(
           child: Container(
-            child: ,
+            child: Container(
+              child: Text('Barangay Cleanup Drive'),
+            ),
           ),
         );
       },
