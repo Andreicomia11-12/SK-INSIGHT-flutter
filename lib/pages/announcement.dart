@@ -228,7 +228,9 @@ class _AnnouncementState extends State<Announcement> {
       context: context,
       builder: (BuildContext context) {
         return Dialog(
-          child: Container(),
+          child: Container(
+            child: 
+          ),
         );
       },
     );
