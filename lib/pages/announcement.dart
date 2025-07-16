@@ -223,7 +223,7 @@ class _AnnouncementState extends State<Announcement> {
   void _viewAnnouncementModal() {
     showDialog(
       context: context,
-       barrierDismissible: false,
+      barrierDismissible: false,
       builder: (BuildContext context) {
         return Dialog(
           shape: RoundedRectangleBorder(
@@ -237,21 +237,50 @@ class _AnnouncementState extends State<Announcement> {
               children: [
                 Container(
                   margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                    child: Text('Barangay Cleanup Drive',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )),
-                Container(
-                  child: Text('Time&Date: 8:00 AM - 12:00 PM June 13, 2024'),
-                ),
-                Container(child: Text('Subject: Community Cleanup')),
-                Container(
                   child: Text(
-                    'Details: Join us for a community cleanup drive to keep our barangay clean and green. Volunteers are welcome!',
+                    'Barangay Cleanup Drive',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
+                Container(
+                  margin: EdgeInsets.only(top: 13),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          'Time&Date: 8:00 AM - 12:00 PM June 13, 2024',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          'Subject: Community Cleanup',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(
+                          'Details: Join us for a community cleanup drive to keep our barangay clean and green. Volunteers are welcome!',
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
