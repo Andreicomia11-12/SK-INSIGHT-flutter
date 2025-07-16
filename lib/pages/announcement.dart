@@ -230,12 +230,19 @@ class _AnnouncementState extends State<Announcement> {
             borderRadius: BorderRadius.circular(20),
           ),
           child: SizedBox(
-            width: 300,
-            height: 220,
+            width: 320,
+            height: 240,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Container(child: Text('Barangay Cleanup Drive')),
+                Container(
+                  margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: Text('Barangay Cleanup Drive',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )),
                 Container(
                   child: Text('Time&Date: 8:00 AM - 12:00 PM June 13, 2024'),
                 ),
