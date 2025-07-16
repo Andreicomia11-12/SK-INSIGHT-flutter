@@ -103,7 +103,6 @@ class _AnnouncementState extends State<Announcement> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pop();
                           _viewAnnouncementModal();
                         },
                         child: Text(
@@ -224,9 +223,15 @@ class _AnnouncementState extends State<Announcement> {
   void _viewAnnouncementModal() {
     showDialog(
       context: context,
+       barrierDismissible: false,
       builder: (BuildContext context) {
         return Dialog(
-          child: Container(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: SizedBox(
+            width: 300,
+            height: 220,
             child: Column(
               children: [
                 Container(child: Text('Barangay Cleanup Drive')),
