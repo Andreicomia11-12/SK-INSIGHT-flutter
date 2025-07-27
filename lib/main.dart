@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: Announcement(), // or any other screen like Login() if needed
+      home: Aboutus(), // or any other screen like Login() if needed
     );
   }
 }

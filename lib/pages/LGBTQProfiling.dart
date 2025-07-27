@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/educ.dart';
 import 'KKProfiling.dart';
+import '../widgets/custom_navbar.dart';
 
 class LGBTQ extends StatelessWidget {
   const LGBTQ({super.key});
@@ -19,103 +20,7 @@ class LGBTQ extends StatelessWidget {
             children: [
               // Navbar
               Container(
-                margin: const EdgeInsets.fromLTRB(0, 60, 0, 0),
-                width: formWidth,
-                height: 70,
-                padding: const EdgeInsets.symmetric(horizontal: 25),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF0A2C59),
-                  borderRadius: BorderRadius.circular(18),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 10,
-                      spreadRadius: 5,
-                      offset: Offset(0, 4),
-                    ),
-                  ],
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    // Left: Logo + Text
-                    Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(40),
-                          child: Image.asset(
-                            'assets/logo.jpg',
-                            width: 40,
-                            height: 40,
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
-                          "SK-INSIGHT",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    // Center: Hamburger menu
-                    PopupMenuButton<String>(
-                      icon: const Icon(Icons.menu, color: Colors.white, size: 30),
-                      color: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      elevation: 8,
-                      onSelected: (value) {
-                        if (value == 'educational') {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const educ()),
-                          );
-                        } else if (value == 'profiling') {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Kkprofiling()),
-                          );
-                        }
-                      },
-                      itemBuilder: (BuildContext context) => [
-                        PopupMenuItem(
-                          value: 'educational',
-                          child: Row(
-                            children: const [
-                              Icon(Icons.school, color: Colors.blueAccent, size: 20),
-                              SizedBox(width: 10),
-                              Text('Educational Assistance'),
-                            ],
-                          ),
-                        ),
-                        PopupMenuItem(
-                          value: 'profiling',
-                          child: Row(
-                            children: const [
-                              Icon(Icons.person, color: Colors.green, size: 20),
-                              SizedBox(width: 10),
-                              Text('SK Profiling'),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    // Right: Person + Bell
-                    Row(
-                      children: const [
-                        Icon(Icons.person, color: Colors.white),
-                        SizedBox(width: 10),
-                        Icon(Icons.notifications, color: Colors.white),
-                      ],
-                    ),
-                  ],
-                ),
+                child: CustomNavBar(),
               ),
 
               const SizedBox(height: 20),
@@ -144,7 +49,6 @@ class LGBTQ extends StatelessWidget {
     return Container(
       width: width,
       padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.only(top: 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
