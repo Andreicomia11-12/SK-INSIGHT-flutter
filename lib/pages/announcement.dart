@@ -282,7 +282,9 @@ class _AnnouncementState extends State<Announcement> {
                 ),
 
                 SizedBox(height: 20),
-                TextButton(
+                Container(
+                margin:  EdgeInsets.fromLTRB(0, 5, 0, 15),
+                  child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop(); // Close the dialog
                     Navigator.of(context).pushAndRemoveUntil(
@@ -290,12 +292,15 @@ class _AnnouncementState extends State<Announcement> {
                       (Route<dynamic> route) => false,
                     );
                   },
-                  style: TextButton.styleFrom(foregroundColor: Colors.black),
                   child: Text(
                     'Close',
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
                   ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF0A2C59),),
                 ),
+                ),
+                
               ],
             ),
           ),
