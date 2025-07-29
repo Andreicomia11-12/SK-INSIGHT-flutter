@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/req.dart';
+import 'package:skinsight/pages/home.dart';
 import 'KKProfiling.dart';
 import 'siblings_section.dart';
+import 'thankyou.dart';
 import '../widgets/custom_navbar.dart';
 
 class educ extends StatelessWidget {
@@ -63,6 +65,10 @@ class educ extends StatelessWidget {
                                 child: TextFormField(
                                   decoration: InputDecoration(
                                     labelText: 'Your Answer',
+                                    labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                   ),
                                 ),
                               ),
@@ -103,6 +109,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -146,6 +156,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -188,6 +202,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -230,6 +248,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -272,6 +294,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -314,6 +340,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -356,6 +386,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -398,6 +432,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -440,6 +478,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -482,6 +524,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -524,6 +570,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -566,6 +616,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -611,6 +665,10 @@ class educ extends StatelessWidget {
                                         decoration: InputDecoration(
                                           labelText:
                                               'Your Answer(ex.Educational Assistance)',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -653,6 +711,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -665,6 +727,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -707,6 +773,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -719,6 +789,10 @@ class educ extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                            fontSize: 13,
+                                            color: Colors.black38
+                                          )
                                         ),
                                       ),
                                     ),
@@ -742,7 +816,12 @@ class educ extends StatelessWidget {
                             width: 100, // Set your desired square size
                             height: 50,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => TY()),
+                              );
+                              },
                               child: Text(
                                 'Submit',
                                 style: TextStyle(

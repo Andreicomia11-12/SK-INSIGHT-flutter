@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/educ.dart';
+import 'package:skinsight/pages/home.dart';
 import 'KKProfiling.dart';
+import 'thankyou.dart';
 import '../widgets/custom_navbar.dart';
 
 class LGBTQ extends StatelessWidget {
@@ -35,6 +37,7 @@ class LGBTQ extends StatelessWidget {
                     buildTextFieldCard('Birthday', formWidth),
                     buildTextFieldCard('Sex Assigned at Birth', formWidth),
                     buildDropdownCard(formWidth),
+                    buildSubmitButton(context),
                   ],
                 ),
               ),
@@ -111,7 +114,13 @@ class LGBTQ extends StatelessWidget {
         children: [
           Text('$label:'),
           TextFormField(
-            decoration: const InputDecoration(labelText: 'Your Answer'),
+            decoration: const InputDecoration(
+              labelText: 'Your Answer',
+              labelStyle: TextStyle(
+                fontSize: 13,
+                color: Colors.black38
+              )
+              ),
           ),
         ],
       ),
@@ -122,7 +131,7 @@ class LGBTQ extends StatelessWidget {
     return Container(
       width: width,
       padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.only(top: 30, bottom: 30),
+      margin: const EdgeInsets.only(top: 30, bottom: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -143,6 +152,10 @@ class LGBTQ extends StatelessWidget {
           DropdownButtonFormField<String>(
             decoration: const InputDecoration(
               labelText: 'Your Answer',
+              labelStyle: TextStyle(
+                fontSize: 13,
+                color: Colors.black38
+              )
             ),
             items: const [
               DropdownMenuItem(value: 'Lesbian', child: Text('Lesbian')),
@@ -156,6 +169,37 @@ class LGBTQ extends StatelessWidget {
             },
           ),
         ],
+      ),
+    );
+  }
+
+  Widget buildSubmitButton(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(30, 0, 0, 20),
+      alignment: Alignment.centerLeft,
+      child: SizedBox(
+        width: 100,
+        height: 50,
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => TY()),
+          );},
+          child: const Text(
+            'Submit',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF0A2C59),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+          ),
+        ),
       ),
     );
   }

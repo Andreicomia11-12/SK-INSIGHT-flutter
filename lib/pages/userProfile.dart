@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'KKProfiling.dart';
 import 'LGBTQProfiling.dart';
+import 'login.dart';
 import 'package:skinsight/widgets/custom_navbar.dart';
 
 class userProfile extends StatefulWidget {
@@ -159,7 +160,10 @@ class _userProfileState extends State<userProfile> {
                     ),
                     ElevatedButton.icon(
                       onPressed: () {
-                        print("Logout clicked");
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => LoginPage()),
+                        );
                       },
                       icon: const Icon(Icons.logout, color: Colors.white),
                       label: Text(
@@ -487,26 +491,4 @@ class _userProfileState extends State<userProfile> {
       },
     );
   }
-
-  // void _showTYModal() {
-  //   showDialog(
-  //     context: context,
-  //     barrierDismissible: false,
-  //     builder: (BuildContext context) {
-  //       return Dialog(
-  //         shape: RoundedRectangleBorder(
-  //           borderRadius: BorderRadius.circular(20),
-  //         ),
-  //         child: Container(
-  //           width: 300,
-  //           padding: const EdgeInsets.all(25),
-  //           decoration: BoxDecoration(
-  //             color: Colors.white,
-  //             borderRadius: BorderRadius.circular(20),
-  //           ),
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
 }

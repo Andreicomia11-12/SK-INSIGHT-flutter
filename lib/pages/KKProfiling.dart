@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'KKProfiling.dart';
+import 'thankyou.dart';
+import 'package:skinsight/pages/home.dart';
 import '../widgets/custom_navbar.dart';
 
 
@@ -128,6 +130,9 @@ class Kkprofiling extends StatelessWidget {
                                 child: Text(
                                   'I. Profile',
                                   textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold
+                                  ),
                                 ),
                               ),
                               Container(
@@ -141,6 +146,10 @@ class Kkprofiling extends StatelessWidget {
                                 child: TextFormField(
                                   decoration: InputDecoration(
                                     labelText: 'Your Answer',
+                                    labelStyle: TextStyle(
+                                      fontSize: 13,
+                                      color: Colors.black38
+                                    )
                                   ),
                                 ),
                               ),
@@ -180,6 +189,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -222,6 +235,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -264,6 +281,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -306,6 +327,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -348,6 +373,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -390,6 +419,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -432,6 +465,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -474,6 +511,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -516,6 +557,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -558,6 +603,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -600,6 +649,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -642,6 +695,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -683,6 +740,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -838,6 +899,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -948,6 +1013,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1043,6 +1112,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1168,6 +1241,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1383,6 +1460,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1463,6 +1544,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1543,6 +1628,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1623,6 +1712,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1720,6 +1813,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1800,6 +1897,10 @@ class Kkprofiling extends StatelessWidget {
                                       dropdownColor: Color(0xFF0A2C59),
                                       decoration: const InputDecoration(
                                         labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                       ),
                                       items: const [
                                         DropdownMenuItem(
@@ -1893,6 +1994,10 @@ class Kkprofiling extends StatelessWidget {
                                       child: TextFormField(
                                         decoration: InputDecoration(
                                           labelText: 'Your Answer',
+                                          labelStyle: TextStyle(
+                                          fontSize: 13,
+                                          color: Colors.black38
+                                        )
                                         ),
                                       ),
                                     ),
@@ -1900,6 +2005,37 @@ class Kkprofiling extends StatelessWidget {
                                 ),
                               ),
                             ],
+                          ),
+                        ),
+                        Container(
+                          margin: EdgeInsets.fromLTRB(30, 15, 0, 20),
+                          alignment: Alignment.centerLeft,
+                          child: SizedBox(
+                            width: 100, // Set your desired square size
+                            height: 50,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => TY()),
+                              );
+                              },
+                              child: Text(
+                                'Submit',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ), // Or your preferred child
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: Color(0xFF0A2C59),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    16,
+                                  ), // Adjust for roundness
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ],

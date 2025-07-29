@@ -13,6 +13,7 @@ import 'pages/forgotpass2.dart';
 import 'pages/forgotpass3.dart';
 import 'pages/aboutus.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'pages/thankyou.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      home: Aboutus(), // or any other screen like Login() if needed
+      home: LoginPage(), // or any other screen like Login() if needed
     );
   }
 }

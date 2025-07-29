@@ -92,7 +92,6 @@ class Announcement extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.of(context).pop();
                           _viewAnnouncementModal(context);
                       },
                       child: Text(
