@@ -106,7 +106,10 @@ class Home extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.pop(context);
+                               Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Aboutus()),
+                              );
                           },
                           child: const Text(
                             "How it Works",
