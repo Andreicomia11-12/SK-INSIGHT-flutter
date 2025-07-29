@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skinsight/pages/login.dart'; // <-- Import your LoginPage here
 
 void main() {
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Signup()));
@@ -18,13 +19,20 @@ class Signup extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.only(top: 50, bottom: 30),
             decoration: const BoxDecoration(
-              color: Color(0xFF0A2C59), // Added background color
+              color: Color(0xFF0A2C59),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                ClipOval(child: Image.asset('assets/logo.jpg', width: 80, height: 80, fit: BoxFit.cover)),
+                ClipOval(
+                  child: Image.asset(
+                    'assets/logo.jpg',
+                    width: 80,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 const SizedBox(height: 10),
                 const Text(
                   "SANGGUNIANG\nKABATAAN BARANGAY\nPUTING BATO WEST",
@@ -40,7 +48,7 @@ class Signup extends StatelessWidget {
             ),
           ),
 
-          // White login form
+          // White sign-up form
           Expanded(
             child: Center(
               child: Container(
@@ -114,14 +122,33 @@ class Signup extends StatelessWidget {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            // TODO: Sign up logic
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF3467B3),
                           ),
-                          child: const Text("Sign up",
-                            style: TextStyle(
-                              color: Colors.white
-                            ),),
+                          child: const Text(
+                            "Sign up",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      // 👇 Back to Login button
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => const LoginPage()),
+                          );
+                        },
+                        child: const Text(
+                          "Back to Login",
+                          style: TextStyle(
+                            color: Color(0xFF3467B3),
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       ),
                     ],

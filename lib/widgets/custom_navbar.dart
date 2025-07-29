@@ -152,7 +152,7 @@ class CustomNavBar extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const userProfile()),
+                      MaterialPageRoute(builder: (context) => const UserProfile()),
                     );
                   },
                   child: const Icon(Icons.person, color: Colors.white, size: 30),
