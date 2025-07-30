@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/forgotpass1.dart';
+import 'package:skinsight/pages/login.dart'; // <-- Import your LoginPage
 
 class Forgot extends StatelessWidget {
   const Forgot({super.key});
@@ -126,6 +127,23 @@ class Forgot extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
                             ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 15),
+                      // 👇 Back to Login button
+                      TextButton(
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => const LoginPage()),
+                          );
+                        },
+                        child: const Text(
+                          "Back to Login",
+                          style: TextStyle(
+                            color: Color(0xFF3467B3),
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),

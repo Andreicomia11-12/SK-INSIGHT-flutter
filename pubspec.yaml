@@ -19,6 +19,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.6
 
 flutter:
   uses-material-design: true
@@ -26,8 +28,12 @@ flutter:
   assets:
     - assets/
 
-  # Uncomment and configure this if you add custom fonts
-  # fonts:
-  #   - family: YourFontFamily
-  #     fonts:
-  #       - asset: fonts/YourFont.ttf
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.jpg"
+
+flutter_native_splash:
+  color: "#ffffff"           # Pure white background
+  android: true
+  ios: true

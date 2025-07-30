@@ -1,5 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:skinsight/pages/home.dart';
+import 'package:skinsight/pages/forgot_pass.dart';
+import 'package:skinsight/pages/signup.dart';
 
 void main() {
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: LoginPage()));
@@ -179,6 +182,50 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
+                      SizedBox(height: 15),
+                      Column(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => Forgot()),
+                              );
+                            },
+                            child: Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                color: Color(0xFF3467B3),
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 8),
+                          RichText(
+                            text: TextSpan(
+                              text: "Don't have an account? ",
+                              style: TextStyle(color: Colors.black87),
+                              children: [
+                                TextSpan(
+                                  text: "Sign up",
+                                  style: TextStyle(
+                                    color: Color(0xFF3467B3),
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => Signup()),
+                                      );
+                                    },
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 20),
                     ],
                   ),
                 ),
