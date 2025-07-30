@@ -17,7 +17,8 @@ class educ extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            const Align(
+              alignment: Alignment.topCenter,
               child: CustomNavBar(),
             ),
 
