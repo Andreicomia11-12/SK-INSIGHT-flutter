@@ -11,17 +11,10 @@ class educ extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: const Color(0xFFD1E1F5),
-      body: SingleChildScrollView(
+    return PageWithFixedNavbar(
+      child: SingleChildScrollView(
         child: Column(
           children: [
-            const Align(
-              alignment: Alignment.topCenter,
-              child: CustomNavBar(),
-            ),
-
             // Body content
             Container(
               alignment: Alignment.center,
