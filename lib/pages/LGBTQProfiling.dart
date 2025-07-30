@@ -11,21 +11,14 @@ class LGBTQ extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    double formWidth = screenWidth * 0.9 > 500 ? 500 : screenWidth * 0.9;
+    double formWidth = screenWidth * 0.84 > 500 ? 500 : screenWidth * 0.84;
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: const Color(0xFFD1E1F5),
-      body: SingleChildScrollView(
+    return PageWithFixedNavbar(
+      child: SingleChildScrollView(
         child: Center(
           child: Column(
             children: [
-              // Navbar
-              Container(
-                child: CustomNavBar(),
-              ),
-
-              const SizedBox(height: 20),
+              const SizedBox(height: 25),
 
               Form(
                 child: Column(
